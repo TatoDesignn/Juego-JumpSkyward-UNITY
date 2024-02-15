@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     bool moving;
     bool moving2;
     bool canJump;
+    float altura = 0f;
 
     void Start()
     {
@@ -31,7 +32,8 @@ public class PlayerController : MonoBehaviour
 
     private void Movimiento()
     {
-        if(moving = Input.GetAxisRaw("Horizontal") == 1)
+
+        if (moving = Input.GetAxisRaw("Horizontal") == 1)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
@@ -40,11 +42,17 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
-        if(Input.GetKey(KeyCode.W) && canJump)
+        animator.SetBool("Walk", moving);
+        animator.SetBool("Walk2", moving2);
+
+        if (Input.GetKey(KeyCode.W) && canJump)
         {
             rb.AddForce(Vector2.up * saltar, ForceMode2D.Impulse);
             canJump = false;
+            animator.SetTrigger("Jump");
         }
+
+
     }
 
     private void FixedUpdate()
@@ -61,6 +69,15 @@ public class PlayerController : MonoBehaviour
         if(collision.collider.tag == "Suelo")
         {
             canJump = true;
+            animator.SetBool("Suelo", true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Suelo")
+        {
+            animator.SetBool("Suelo", false);
         }
     }
 }

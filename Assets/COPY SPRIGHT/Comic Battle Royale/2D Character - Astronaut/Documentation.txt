@@ -1,0 +1,94 @@
+A four-directional 2D comic character set with a huge variety in animations and actions including weapons and a themed tilemap with decoration available in five colour alternatives.
+
+############################################################
+
+This Package contains 6675 unique sprites (png). This is based on all animation frames per character times the five colour alternatives. Weapons, bombs, bullets and effects only count once in this calculation. Each colour alternative contains a copy of those which can be deleted as soon as you know which one you want to use.
+
+Character Animations:
+Idle (64 sprites, size: 360x300px, format: png)
+Walk (42 sprites, size: 360x300px, format: png)
+Run (30 sprites, size: 360x300px, format: png)
+Jump (57 sprites, size: 360x300px, format: png)
+Slide (33 sprites, size: 360x300px, format: png)
+Crawl (57 sprites, size: 360x300px, format: png)
+Duck (63 sprites, size: 360x300px, format: png)
+Hit_A (39 sprites, size: 360x300px, format: png)
+Hit_B (39 sprites, size: 360x300px, format: png)
+Vanish (32 sprites, size: 360x300px, format: png)
+Bomb_hold (84 sprites, size: 360x300px, format: png)
+Bomb_throw (60 sprites, size: 360x300px, format: png)
+Bomb_walk (80 sprites, size: 360x300px, format: png)
+Bow (7 sprites, size: 360x300px, format: png)
+Bow_walk (98 sprites, size: 360x300px, format: png)
+Gun (4 sprites, size: 360x300px, format: png)
+Gun_walk (56 sprites, size: 360x300px, format: png)
+Rifle (4 sprites, size: 360x300px, format: png)
+Rifle_walk (56 sprites, size: 360x300px, format: png)
+Hammer_idle (5 sprites, size: 360x300px, format: png)
+Hammer_attack (115 sprites, size: 360x300px, format: png)
+Sword_idle (5 sprites, size: 360x300px, format: png)
+Sword_attack (60 sprites, size: 360x300px, format: png)
+Scythe_idle (5 sprites, size: 360x300px, format: png)
+Scythe_attack (70 sprites, size: 360x300px, format: png)
+
+Weapons, Bombs, Bullets & Effects:
+Bow (6 sprites, 448x432px / 180x120px, format: png)
+Gun (3 sprites, 200x250px / 250x200px, format: png)
+Hammer (69 sprites, 448x432px, format: png)
+Rifle (3 sprites, 200x250px / 250x200px, format: png)
+Scythe (42 sprites, 448x432px, format: png)
+Sword (36 sprites, 448x432px, format: png)
+Bomb (18 sprites, size: 99x132px, format: png)
+Bomb Explosion (11 sprites, size: 317x317px, format: png)
+Bullet Gun (1 sprite, size: 155x107px, format: png)
+Bullet Rifle (1 sprite, size: 125x51px, format: png)
+Bullet Arrow (1 sprite, size: 164x36px, format: png)
+Muzzle Flash Gun (1 sprite, size: 155x107px, format: png)
+Muzzle Flash Rifle (1 sprite, size: 87x47px, format: png)
+Character Shadow (1 sprite, size: 147x70px, format: png)
+
+Tilemap & Decoration:
+Sprite Atlas (1 sprite, 2048x2048px, format: png)
+Decoration 1 (1 sprite, 128x128px, format: png)
+Decoration 2 (1 sprite, 128x128px, format: png)
+Decoration 3 (1 sprite, 128x128px, format: png)
+Block 1 (1 sprite, 256x256px, format: png)
+
+############################################################
+
+GENERAL
+The package does not contain any code or sounds. The package is about sprite assets only.
+The package contains for showcasing some demo scenes and animations.
+It is recommended to create or add a proper animation controller.
+
+COLOR ALTERNATIVES
+Each Character, including its tilemap and decoration, has 5 color variants.
+Each color variant has it’s own sprites and structures (demo scenes).
+Folders of the color variants (A, B, C, D, E).
+
+ANIMATION STRUCTURE
+Character animations support 4 directions. Sprites are structured in up, down and side. Sprites for side animation always look to the left. The animation for right is the animation left - mirrored. (common practice).
+If a character is holding items like weapons, boms, bows… the animation is split up in several character layers so the item sprite can be positioned in between. Animation that require this have folders with “overlay”.
+
+TILEMAP STRUCTURE
+The tilemap has simple tiles and can be combined with other character’s tilemaps of 2D ULTIMATE.
+To build different layers you will need to add multiple tilemap grids / layers.
+The structure is reversed. The higher a ground is supposed to be in the end result the lower it needs to be in the hierarchy (see demo example).
+The Walls always need to be on top to cover transitions between grounds if wanted.
+
+IMPORTING
+We recommend to only import animations and color variants that you will use. Example: Each Character has about 1K sprites. Due to the color alternatives this results in 5K per character. If you buy all 100 characters and try to load them into unity all at once you end up importing about 500,000 sprites. Depending on your hardware this can work but will take several hours.
+To avoid dependency issues each character and even color alternative has a copy of the general objects, weapons, bombs and effects. That is redundant but required so a folder can work on its own. If you start a project we recommend to delete all duplicates and just focus on one version.
+
+FAQ:
+Usage outside of Unity: Yes, you can buy this package and also use the sprites on other game engines.
+PSD, project or animation files: We don't provide any of those, only final sprites.
+AI: All characters have been crafted by hand with love and passion.
+
+############################################################
+
+Copyright: ©2023 Lootzifr GmbH
+
+Website: https://lootzifr.com
+Address: Lootzifr GmbH, Stargarder Str. 8, 10437 Berlin, Germany
+E-Mail: mail@lootzifr.com
