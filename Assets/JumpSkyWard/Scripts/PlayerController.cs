@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour
     bool moving;
     bool moving2;
     bool canJump;
-    float altura = 0f;
 
     void Start()
     {
@@ -51,7 +50,6 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             animator.SetTrigger("Jump");
         }
-
 
     }
 
