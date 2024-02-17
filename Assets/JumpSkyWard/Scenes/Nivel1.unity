@@ -721,8 +721,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1008070774}
   - component: {fileID: 1008070773}
-  - component: {fileID: 1008070772}
   - component: {fileID: 1008070771}
+  - component: {fileID: 1008070772}
   - component: {fileID: 1008070775}
   - component: {fileID: 1008070776}
   m_Layer: 9
@@ -745,13 +745,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  saltar: 6.5
+  saltar: 5
   mano: {fileID: 1622630233}
   espada: {fileID: 78361232}
   "da\xF1o": 0
   tiempoEntreAtaque: 0.5
   tiempoSiguienteAtaque: 0
   controladorGolpe1: {fileID: 1742890190}
+  radioGolpe: 1
   size: {x: 2, y: 2}
   angulo: 2
 --- !u!50 &1008070772
@@ -1059,7 +1060,7 @@ Transform:
   m_GameObject: {fileID: 1742890189}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.8716054, y: 0.35384583, z: -0.11304945}
+  m_LocalPosition: {x: 0.46, y: -0.22, z: -0.11304945}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

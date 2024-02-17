@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float tiempoEntreAtaque;
     [SerializeField] private float tiempoSiguienteAtaque;
     [SerializeField] private Transform controladorGolpe1;
+    [SerializeField] private float radioGolpe;
     [SerializeField] private Vector2 size;
     [SerializeField] private float angulo;
 
@@ -94,15 +95,22 @@ public class PlayerController : MonoBehaviour
 
     private void Daño()
     {
+        animator.SetTrigger("Golpe");
         Collider2D[] objetos = Physics2D.OverlapBoxAll(controladorGolpe1.position, size, angulo);
 
-        foreach (Collider2D collisionador in objetos)
+        /*foreach (Collider2D collisionador in objetos)
         {
             if (collisionador.CompareTag("Enemigo"))
             {
 
             }
-        }
+        }*/
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = UnityEngine.Color.green;
+        Gizmos.DrawWireSphere(controladorGolpe1.position, radioGolpe);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
