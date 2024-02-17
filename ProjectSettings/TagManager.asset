@@ -7,6 +7,9 @@ TagManager:
   - Suelo
   - Personaje
   - Arma
+  - Escalera
+  - Laser
+  - Fragmento
   layers:
   - Default
   - TransparentFX
