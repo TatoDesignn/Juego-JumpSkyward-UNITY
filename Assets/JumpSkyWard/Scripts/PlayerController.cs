@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -13,10 +14,25 @@ public class PlayerController : MonoBehaviour
     public float saltar;
 
     [Space]
+    [Header("Armas: ")]
+    public GameObject mano;
+    public GameObject espada;
+
+    [Space]
+    [Header("Control Ataque")]
+    public int daño;
+    [SerializeField] private float tiempoEntreAtaque;
+    [SerializeField] private float tiempoSiguienteAtaque;
+    [SerializeField] private Transform controladorGolpe1;
+    [SerializeField] private Vector2 size;
+    [SerializeField] private float angulo;
+
+    [Space]
     [Header("Variable globales: ")]
     bool moving;
     bool moving2;
     bool canJump;
+    bool arma = false;
 
     void Start()
     {
@@ -27,6 +43,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Movimiento();
+        Ataque();
     }
 
     private void Movimiento()
@@ -50,7 +67,20 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             animator.SetTrigger("Jump");
         }
+    }
 
+    private void Ataque()
+    {
+        if (tiempoSiguienteAtaque > 0)
+        {
+            tiempoSiguienteAtaque -= Time.deltaTime;
+        }
+
+        if (Input.GetMouseButtonDown(0) && tiempoSiguienteAtaque <= 0 && arma)
+        {
+            tiempoSiguienteAtaque = tiempoEntreAtaque;
+            Daño();
+        }
     }
 
     private void FixedUpdate()
@@ -60,6 +90,19 @@ public class PlayerController : MonoBehaviour
         newVelocity.y = rb.velocity.y;
 
         rb.velocity = newVelocity;
+    }
+
+    private void Daño()
+    {
+        Collider2D[] objetos = Physics2D.OverlapBoxAll(controladorGolpe1.position, size, angulo);
+
+        foreach (Collider2D collisionador in objetos)
+        {
+            if (collisionador.CompareTag("Enemigo"))
+            {
+
+            }
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -76,6 +119,17 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.tag == "Suelo")
         {
             animator.SetBool("Suelo", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Arma"))
+        {
+            Destroy(collision.gameObject);
+            arma = true;
+            mano.SetActive(true);
+            espada.SetActive(true);
         }
     }
 }

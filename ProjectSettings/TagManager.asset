@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Suelo
   - Personaje
+  - Arma
   layers:
   - Default
   - TransparentFX
