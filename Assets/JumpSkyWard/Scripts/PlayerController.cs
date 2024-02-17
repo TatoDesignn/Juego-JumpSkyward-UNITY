@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public GameObject espada;
 
     [Space]
-    [Header("Control Ataque")]
+    [Header("Control Ataque: ")]
     public int daño;
     [SerializeField] private float tiempoEntreAtaque;
     [SerializeField] private float tiempoSiguienteAtaque;
@@ -29,11 +31,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float angulo;
 
     [Space]
+    [Header("Control Puntaje: ")]
+    public TextMeshProUGUI texto;
+
+    [Space]
     [Header("Variable globales: ")]
     bool moving;
     bool moving2;
     bool canJump;
     bool arma = false;
+    bool escala = false;
+    bool mover = true;
+    int fragmentos = 0;
 
     void Start()
     {
@@ -50,11 +59,11 @@ public class PlayerController : MonoBehaviour
     private void Movimiento()
     {
 
-        if (moving = Input.GetAxisRaw("Horizontal") == 1)
+        if (moving = Input.GetAxisRaw("Horizontal") == 1 && mover)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        if(moving2 = Input.GetAxisRaw("Horizontal") == -1)
+        if(moving2 = Input.GetAxisRaw("Horizontal") == -1 && mover)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
@@ -89,6 +98,11 @@ public class PlayerController : MonoBehaviour
         Vector2 newVelocity;
         newVelocity.x = Input.GetAxisRaw("Horizontal") * velocidad;
         newVelocity.y = rb.velocity.y;
+        if (escala)
+        {
+            newVelocity.y = Input.GetAxisRaw("Vertical") * 3;
+        }
+         
 
         rb.velocity = newVelocity;
     }
@@ -107,6 +121,16 @@ public class PlayerController : MonoBehaviour
         }*/
     }
 
+    private void Muerte()
+    {
+        SceneManager.LoadScene("Nivel1");
+    }
+
+    private void Puntos()
+    {
+        texto.text = ": " + fragmentos.ToString();
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = UnityEngine.Color.green;
@@ -119,6 +143,16 @@ public class PlayerController : MonoBehaviour
         {
             canJump = true;
             animator.SetBool("Suelo", true);
+        }
+
+        if (collision.collider.tag == "Laser")
+        {
+            espada.SetActive(false);
+            mano.SetActive(false);
+            mover = false;
+            velocidad = 0;
+            animator.SetTrigger("Muerte");
+            Invoke("Muerte", 2f);
         }
     }
 
@@ -138,6 +172,36 @@ public class PlayerController : MonoBehaviour
             arma = true;
             mano.SetActive(true);
             espada.SetActive(true);
+        }
+
+        if (collision.CompareTag("Fragmento"))
+        {
+            fragmentos += 10;
+            Destroy(collision.gameObject);
+            Puntos();
+        }
+
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Escalera"))
+        {
+
+            if (Input.GetKey(KeyCode.W))
+            {
+                animator.SetBool("Subir", true);
+                escala = true;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Escalera"))
+        {
+            animator.SetBool("Subir", false);
+            escala = false;
         }
     }
 }
