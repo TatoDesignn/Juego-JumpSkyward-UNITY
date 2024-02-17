@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Walk", moving);
         animator.SetBool("Walk2", moving2);
 
-        if (Input.GetKey(KeyCode.W) && canJump)
+        if (Input.GetKey(KeyCode.Space) && canJump)
         {
             rb.AddForce(Vector2.up * saltar, ForceMode2D.Impulse);
             canJump = false;
