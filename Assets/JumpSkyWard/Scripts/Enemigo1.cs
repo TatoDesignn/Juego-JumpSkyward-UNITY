@@ -81,17 +81,23 @@ public class Enemigo1 : MonoBehaviour
     {
         vida -= daño;
 
-        if(vida > 0)
+        if(vida >=1)
         {
             Girar(4);
             animator.SetTrigger("Hit");
         }
-        else if(vida <= 0)
+        else if(vida == 0)
         {
-            Destroy(gameObject);
+            velocidad = 0;
+            animator.SetTrigger("Muerte");
         }
 
         
+    }
+
+    public void Muerte()
+    {
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmos()
