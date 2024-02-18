@@ -4,11 +4,13 @@ using System.Drawing;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     Rigidbody2D rb;
     Animator animator;
+    Animator animatorHud;
 
     [Space]
     [Header("Movimiento jugador: ")]
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float angulo;
 
     [Space]
-    [Header("Control Puntaje: ")]
+    [Header("Control Hud: ")]
     public TextMeshProUGUI texto;
 
     [Space]
@@ -43,11 +45,15 @@ public class PlayerController : MonoBehaviour
     bool escala = false;
     bool mover = true;
     int fragmentos = 0;
+    public int salud = 3;
+    float velocidadF;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        animatorHud = GameObject.FindGameObjectWithTag("hudPersonaje").GetComponent<Animator>();
+        velocidadF = velocidad;
     }
 
     void Update()
@@ -112,16 +118,63 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Golpe");
         Collider2D[] objetos = Physics2D.OverlapBoxAll(controladorGolpe1.position, size, angulo);
 
-        /*foreach (Collider2D collisionador in objetos)
+        foreach (Collider2D collisionador in objetos)
         {
             if (collisionador.CompareTag("Enemigo"))
             {
-
+                collisionador.transform.GetComponent<Enemigo1>().Daño(1);
             }
-        }*/
+        }
+    }
+
+    public void Vida()
+    {
+        if(salud == 2)
+        {
+            Inmovil();
+            animator.SetTrigger("Hit");
+            animatorHud.SetTrigger("V2");
+            Invoke("Restablecer", 0.8f);
+        }
+        else if(salud == 1)
+        {
+            Inmovil();
+            animator.SetTrigger("Hit");
+            animatorHud.SetTrigger("V1");
+            Invoke("Restablecer", 0.8f);
+        }
+        else if(salud == 0)
+        {
+            Muerte();
+            animatorHud.SetTrigger("V0");
+        }
     }
 
     private void Muerte()
+    {
+        Inmovil();
+        animatorHud.SetTrigger("V0");
+        animator.SetTrigger("Muerte");
+        Invoke("Resetear", 2f);
+    }
+
+    private void Inmovil()
+    {
+        espada.SetActive(false);
+        mano.SetActive(false);
+        mover = false;
+        velocidad = 0;
+    }
+
+    public void Restablecer()
+    {
+        espada.SetActive(true);
+        mano.SetActive(true);
+        mover = true;
+        velocidad = velocidadF;
+    }
+
+    private void Resetear()
     {
         SceneManager.LoadScene("Nivel1");
     }
@@ -147,12 +200,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.collider.tag == "Laser")
         {
-            espada.SetActive(false);
-            mano.SetActive(false);
-            mover = false;
-            velocidad = 0;
-            animator.SetTrigger("Muerte");
-            Invoke("Muerte", 2f);
+            Muerte();
         }
     }
 
