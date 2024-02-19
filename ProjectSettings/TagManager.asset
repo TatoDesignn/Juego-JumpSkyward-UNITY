@@ -12,6 +12,9 @@ TagManager:
   - Fragmento
   - hudPersonaje
   - Enemigo
+  - Pared
+  - PuntoCamara
+  - Camara
   layers:
   - Default
   - TransparentFX

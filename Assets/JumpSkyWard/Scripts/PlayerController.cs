@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [Header("Armas: ")]
     public GameObject mano;
     public GameObject espada;
+    public GameObject mira;
 
     [Space]
     [Header("Control Ataque: ")]
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
     [Header("Variable globales: ")]
     bool moving;
     bool moving2;
+    bool enMovimiento;
     bool canJump;
     bool arma = false;
     bool escala = false;
@@ -74,8 +76,18 @@ public class PlayerController : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
 
+        if(moving || moving2)
+        {
+            enMovimiento = true;
+        }
+        else
+        {
+            enMovimiento = false;
+        }
+
         animator.SetBool("Walk", moving);
         animator.SetBool("Walk2", moving2);
+        animator.SetBool("Movimiento", enMovimiento);
 
         if (Input.GetKey(KeyCode.Space) && canJump)
         {
@@ -83,6 +95,41 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             animator.SetTrigger("Jump");
         }
+
+        animator.ResetTrigger("Parado");
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            animator.SetTrigger("agachadoI");
+
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                animator.SetTrigger("agachadoR");
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetTrigger("Parado");
+        }
+
+        /*if (Input.GetKeyDown(KeyCode.S))    
+        {
+            if(moving || moving2)
+            {
+                animator.SetTrigger("agachadoR");
+            }
+            else
+            {
+                animator.ResetTrigger("agachadoR");
+                animator.SetTrigger("agachadoI");
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.S))
+        {
+            animator.ResetTrigger("agachadoI");
+            animator.SetTrigger("Parado");
+        }*/
+
     }
 
     private void Ataque()
@@ -220,6 +267,7 @@ public class PlayerController : MonoBehaviour
             arma = true;
             mano.SetActive(true);
             espada.SetActive(true);
+            mira.SetActive(true);
         }
 
         if (collision.CompareTag("Fragmento"))

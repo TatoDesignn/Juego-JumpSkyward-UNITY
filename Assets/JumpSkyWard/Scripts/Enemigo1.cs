@@ -10,7 +10,6 @@ public class Enemigo1 : MonoBehaviour
 
     public Rigidbody2D rb;
     public float velocidad;
-    float esperando = 0;
     public float vida;
 
     public LayerMask capaAbajo;
@@ -73,8 +72,6 @@ public class Enemigo1 : MonoBehaviour
             correr *= -1;
             velocidad = -1 * (velocidad + correr);
         }
-
-        UnityEngine.Debug.Log(velocidad);
     }
 
     public void Daño(float daño)

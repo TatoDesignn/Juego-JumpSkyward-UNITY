@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlataformaMovimiento : MonoBehaviour
 {
-
+    [Space]
+    [Header("Control Plataforma")]
     [SerializeField] private Transform[] puntosMovimiento;
     [SerializeField] private float velocidad;
+
+    [Space]
     private int siguientePunto = 1;
     private bool ordenPlataforma = true;
 
