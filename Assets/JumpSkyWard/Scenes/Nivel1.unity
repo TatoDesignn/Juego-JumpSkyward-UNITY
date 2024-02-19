@@ -932,6 +932,7 @@ GameObject:
   - component: {fileID: 224236474}
   - component: {fileID: 224236473}
   - component: {fileID: 224236476}
+  - component: {fileID: 224236477}
   m_Layer: 0
   m_Name: Enemigo2
   m_TagString: Untagged
@@ -1021,8 +1022,8 @@ Transform:
   m_GameObject: {fileID: 224236472}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.19, y: 8.71, z: 0}
-  m_LocalScale: {x: 10.774549, y: 10.774549, z: 10.774549}
+  m_LocalPosition: {x: 3.36, y: 9.26, z: 0}
+  m_LocalScale: {x: 14.11787, y: 14.11787, z: 14.11787}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1546117854}
@@ -1046,7 +1047,52 @@ MonoBehaviour:
   capaJugador:
     serializedVersion: 2
     m_Bits: 512
-  tiempoEntreDisparo: 4
+  tiempoEntreDisparo: 2.5
+--- !u!61 &224236477
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224236472}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01391967, y: -0.07182546}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.22980061, y: 0.17634907}
+  m_EdgeRadius: 0
 --- !u!1 &287413215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,7 +1853,7 @@ Transform:
   m_GameObject: {fileID: 507879939}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.580214, y: -6.3049474, z: -9.991524}
+  m_LocalPosition: {x: -26.670214, y: -5.9449472, z: -9.991524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1933,7 +1979,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.582867, y: -5.538111, z: -9.991524}
+  m_LocalPosition: {x: -26.67162, y: -5.5384183, z: -9.991524}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5042,7 +5088,7 @@ Transform:
   m_GameObject: {fileID: 1008070770}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.29, y: -0.8, z: 0}
+  m_LocalPosition: {x: -7.38, y: -0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7329,7 +7375,7 @@ Transform:
   m_GameObject: {fileID: 1546117853}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.039, z: 0}
+  m_LocalPosition: {x: 0, y: -0.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
