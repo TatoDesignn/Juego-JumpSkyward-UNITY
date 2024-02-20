@@ -21,13 +21,19 @@ public class PuntoCamara : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        cinemachine.m_Lens.OrthographicSize = ortho;
-        cinemachine.Follow = zona;
+        if (collision.CompareTag("Personaje"))
+        {
+            cinemachine.m_Lens.OrthographicSize = ortho;
+            cinemachine.Follow = zona;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        cinemachine.Follow = Personaje;
-        cinemachine.m_Lens.OrthographicSize = orthoInicio;
+        if (collision.CompareTag("Personaje"))
+        {
+            cinemachine.Follow = Personaje;
+            cinemachine.m_Lens.OrthographicSize = orthoInicio;
+        }
     }
 }

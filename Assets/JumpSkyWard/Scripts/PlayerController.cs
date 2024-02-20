@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     bool moving2;
     bool enMovimiento;
     bool canJump;
+    bool canDown;
     bool arma = false;
     bool escala = false;
     bool mover = true;
@@ -89,7 +90,7 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("Walk2", moving2);
         animator.SetBool("Movimiento", enMovimiento);
 
-        if (Input.GetKey(KeyCode.Space) && canJump)
+        if (Input.GetKey(KeyCode.Space) && canJump && !escala)
         {
             rb.AddForce(Vector2.up * saltar, ForceMode2D.Impulse);
             canJump = false;
@@ -98,7 +99,7 @@ public class PlayerController : MonoBehaviour
 
         animator.ResetTrigger("Parado");
 
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S) && canDown)
         {
             animator.SetTrigger("agachadoI");
 
@@ -111,25 +112,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("Parado");
         }
-
-        /*if (Input.GetKeyDown(KeyCode.S))    
-        {
-            if(moving || moving2)
-            {
-                animator.SetTrigger("agachadoR");
-            }
-            else
-            {
-                animator.ResetTrigger("agachadoR");
-                animator.SetTrigger("agachadoI");
-            }
-        }
-        else if (Input.GetKeyUp(KeyCode.S))
-        {
-            animator.ResetTrigger("agachadoI");
-            animator.SetTrigger("Parado");
-        }*/
-
     }
 
     private void Ataque()
@@ -171,6 +153,10 @@ public class PlayerController : MonoBehaviour
             {
                 collisionador.transform.GetComponent<Enemigo1>().Daño(1);
             }
+            if (collisionador.CompareTag("Enemigo2"))
+            {
+                collisionador.transform.GetComponent<Enemigo2>().Daño(1);
+            }
         }
     }
 
@@ -210,6 +196,8 @@ public class PlayerController : MonoBehaviour
         espada.SetActive(false);
         mano.SetActive(false);
         mover = false;
+        canDown = false;
+        canJump = false;
         velocidad = 0;
     }
 
@@ -218,6 +206,8 @@ public class PlayerController : MonoBehaviour
         espada.SetActive(true);
         mano.SetActive(true);
         mover = true;
+        canDown = true;
+        canJump = true;
         velocidad = velocidadF;
     }
 
@@ -242,6 +232,7 @@ public class PlayerController : MonoBehaviour
         if(collision.collider.tag == "Suelo")
         {
             canJump = true;
+            canDown = true;
             animator.SetBool("Suelo", true);
         }
 
@@ -256,6 +247,7 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.tag == "Suelo")
         {
             animator.SetBool("Suelo", false);
+            canDown = false;
         }
     }
 

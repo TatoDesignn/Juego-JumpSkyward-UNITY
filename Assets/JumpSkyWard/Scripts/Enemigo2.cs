@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +11,10 @@ public class Enemigo2 : MonoBehaviour
     [Header("Control Enemigo: ")]
     public GameObject bala;
     public Transform controladorDisparo;
+    public CinemachineVirtualCamera cinemachine;
+    public Transform personaje;
+    public GameObject punto;
+
     public float distanciaLinea;
     public LayerMask capaJugador;
     public float tiempoEntreDisparo;
@@ -18,6 +23,7 @@ public class Enemigo2 : MonoBehaviour
     private bool enRango;
     private float tiempoUltimoDisparo;
     private float tiempoEsperaDisparo;
+    private float vida = 5f;
 
     private void Start()
     {
@@ -39,9 +45,30 @@ public class Enemigo2 : MonoBehaviour
         }
     }
 
+    public void Daño(float daño)
+    {
+        vida -= daño;
+
+        if (vida >= 1)
+        {
+            animator.SetTrigger("Hit");
+        }
+        else if (vida == 0)
+        {
+            animator.SetTrigger("Dead");
+        }
+    }
+
     private void Disparar()
     {
         Instantiate(bala, controladorDisparo.position, controladorDisparo.rotation);
+    }
+
+    public void Destruir()
+    {
+        Destroy(punto.gameObject);
+        cinemachine.Follow = personaje;
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmos()
