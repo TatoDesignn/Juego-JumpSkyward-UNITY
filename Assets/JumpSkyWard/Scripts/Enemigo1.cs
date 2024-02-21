@@ -15,15 +15,19 @@ public class Enemigo1 : MonoBehaviour
 
     public LayerMask capaAbajo;
     public LayerMask capaEnfrente;
+    public LayerMask capaPersonaje;
 
     public float distanciaAbajo;
     public float distanciaEnfrente;
+    public float distanciaJugador;
 
     public Transform controladorAbajo;
     public Transform controladorEnfrente;
+    public Transform controladorPlayer;
 
     public bool informacionAbajo;
     public bool informacionEnfrente;
+    public bool informacionPersonaje;
 
     private bool mirandoDerecha = true;
 
@@ -41,6 +45,7 @@ public class Enemigo1 : MonoBehaviour
 
         informacionEnfrente = Physics2D.Raycast(controladorEnfrente.position, transform.right, distanciaEnfrente, capaEnfrente);
         informacionAbajo = Physics2D.Raycast(controladorAbajo.position, transform.up * -1, distanciaAbajo, capaAbajo);
+        informacionPersonaje = Physics2D.Raycast(controladorPlayer.position, transform.right, distanciaJugador, capaPersonaje);
 
         if(informacionEnfrente || !informacionAbajo)
         {
@@ -78,17 +83,34 @@ public class Enemigo1 : MonoBehaviour
     public void Daño(float daño)
     {
         vida -= daño;
+        if (informacionPersonaje)
+        {
+            if (vida >= 1)
+            {
+                Girar(4);
+                animator.SetTrigger("Hit");
+            }
+            else if (vida == 0)
+            {
+                velocidad = 0;
+                animator.SetTrigger("Muerte");
+            }
+        }
 
-        if(vida >=1)
+        else if(!informacionPersonaje)
         {
-            Girar(4);
-            animator.SetTrigger("Hit");
+            if (vida >= 1)
+            {
+                velocidad += 4;
+                animator.SetTrigger("Hit");
+            }
+            else if (vida == 0)
+            {
+                velocidad = 0;
+                animator.SetTrigger("Muerte");
+            }
         }
-        else if(vida == 0)
-        {
-            velocidad = 0;
-            animator.SetTrigger("Muerte");
-        }
+       
 
         
     }
@@ -103,6 +125,7 @@ public class Enemigo1 : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawLine(controladorAbajo.transform.position, controladorAbajo.transform.position + transform.up * -1 * distanciaAbajo);
         Gizmos.DrawLine(controladorEnfrente.transform.position, controladorEnfrente.transform.position + transform.right * distanciaEnfrente);
+        Gizmos.DrawLine(controladorPlayer.transform.position, controladorPlayer.transform.position + transform.right * distanciaJugador);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

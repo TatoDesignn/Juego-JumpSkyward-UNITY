@@ -21,6 +21,7 @@ public class Enemigo2 : MonoBehaviour
 
     [Space]
     private bool enRango;
+    private bool muerte = false;
     private float tiempoUltimoDisparo;
     private float tiempoEsperaDisparo;
     private float vida = 5f;
@@ -34,7 +35,7 @@ public class Enemigo2 : MonoBehaviour
     {
         enRango = Physics2D.Raycast(controladorDisparo.position, transform.right, distanciaLinea, capaJugador);
         
-        if (enRango)
+        if (enRango && !muerte)
         {
             if(Time.time > tiempoEntreDisparo + tiempoUltimoDisparo)
             {
@@ -55,7 +56,9 @@ public class Enemigo2 : MonoBehaviour
         }
         else if (vida == 0)
         {
+            muerte = true;
             animator.SetTrigger("Dead");
+            Invoke("Destruir", 1f);
         }
     }
 
