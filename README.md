@@ -15,11 +15,11 @@
 <h2>Home 💒</h2>
 <p>Nuestro Home esta compuesto por el fondo, logo y Botones, utilizamos un script el cual genera un movimiento en el fondo y lo reposiciona al momento de salir de la vision de la camara.</p>
 <strong>Fondo: </strong>
-<img src="">
+<img style="width: 500px; height: auto;" src="https://cdn.discordapp.com/attachments/1001222483120230501/1209908820663345162/Sinluna.jpg?ex=65e8a265&is=65d62d65&hm=221c9a5be72e8d27e680ffa8dd3dce2848d9aad8b9ccd8e3d3cb3a2391f690fb&">
 <strong>Botones: </strong>
-<img src="">
+<img style="width: 500px; height: auto;" src="https://cdn.discordapp.com/attachments/1001222483120230501/1209916536798715914/Botones.png?ex=65e8a995&is=65d63495&hm=2bba2d1cf7f469e26a64098bffc20cf358f16e8bc3a67877e412e95cbadea664&">
 <strong>Logo: </strong>
-<img src="">
+<img style="width: 300px; height: auto;" src="https://cdn.discordapp.com/attachments/1001222483120230501/1207501537304121425/LogoPositivo.png?ex=65dfe070&is=65cd6b70&hm=ee538e39a351ab9b6aa4235f8b35b2349e2f6911c7703329b51728a1f48addd0&">
 <h2>Instrucciones 🕹️</h2>
 <ol>
   <li><strong>Controles: </strong></li>
