@@ -14,6 +14,7 @@ public class Nave : MonoBehaviour
     public Transform personajeT;
     public GameObject personaje;
     public GameObject particulas;
+    public GameObject letrero;
 
     void Start()
     {
@@ -42,10 +43,17 @@ public class Nave : MonoBehaviour
     {
         if (collision.CompareTag("Personaje"))
         {
+            letrero.SetActive(true);
+
             if(Input.GetKey(KeyCode.E))
             {
                 Animacion();
             }
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        letrero.SetActive(false);
     }
 }
