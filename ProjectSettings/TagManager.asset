@@ -17,6 +17,8 @@ TagManager:
   - Camara
   - Enemigo2
   - Nave
+  - Llave
+  - Puerta
   layers:
   - Default
   - TransparentFX
