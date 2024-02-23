@@ -31,8 +31,14 @@ public class Puerta : MonoBehaviour
     {
         if (collision.CompareTag("Personaje"))
         {
-            letrero.SetActive(false);
-            letrero2.SetActive(false);
+            if (!llave)
+            {
+                letrero.SetActive(false);
+            }
+            else if (llave)
+            {
+                letrero2.SetActive(false);
+            }
         }
     }
 

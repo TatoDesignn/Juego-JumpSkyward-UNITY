@@ -19,6 +19,7 @@ TagManager:
   - Nave
   - Llave
   - Puerta
+  - Restablecer
   layers:
   - Default
   - TransparentFX
