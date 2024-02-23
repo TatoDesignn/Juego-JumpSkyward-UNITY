@@ -2,6 +2,7 @@
 <img src="https://cdn.discordapp.com/attachments/1001222483120230501/1207501537304121425/LogoPositivo.png?ex=65dfe070&is=65cd6b70&hm=ee538e39a351ab9b6aa4235f8b35b2349e2f6911c7703329b51728a1f48addd0&">
 <h2>Historia 🗺️</h2>
 <p>En una era de exploración intergaláctica, la humanidad ha alcanzado las estrellas, buscando nuevos mundos y civilizaciones. Eres el astronauta Alex Skyward, parte de la iniciativa "Leap Beyond", un proyecto destinado a explorar los confines más remotos del universo. Durante una misión rutinaria en la nave "Odyssey", una tormenta de materia oscura, golpea la nave, causando que se desvíe de su curso y se estrelle en el planeta desconocido de Zephyria. Este mundo está compuesto de plataformas flotantes.</p>
+<img src="https://cdn.discordapp.com/attachments/1001222483120230501/1210424034194497576/Portada.jpg?ex=65ea823a&is=65d80d3a&hm=8697a5f72eb7814e066067c0fb13cb393dbd158ea3ffb74e9437d7825ed70b41&">
 <h3>Mision:</h3>
 <p>Tu misión es explorar las islas flotantes de Zephyria, superando obstáculos y combatiendo a los diferentes enemigos. Deberás recolectar los fragmentos y descifrar el misterio de la antigua civilización de Zephyria, que podría ser la clave para volver a casa.</p>
 <h2>Nivel 1 ☄️</h2>
