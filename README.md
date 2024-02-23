@@ -39,6 +39,11 @@
     <li><strong>300 Fragmentos:</strong> 3 estrella.</li>
   </ul>
 </ol>
+<h2>Mas Información 💾</h2>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=q_EAfGq9DEc">Link video del juego</li>
+  <li><a href="https://www.canva.com/design/DAF9jJxA8sE/wHQfCNZ8P3p0dWzCN2eqYQ/edit?utm_content=DAF9jJxA8sE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Link presentación Canva</li>
+</ul>
 <h2>Creditos ⭐</h2>
 <ul>
   <li>Santiago Piedrahita (Diseñador UI/UX)</li>
