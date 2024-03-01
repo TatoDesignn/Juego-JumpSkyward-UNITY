@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     Animator animator;
     Animator animatorHud;
-    Puerta door;
 
     [Space]
     [Header("Movimiento jugador: ")]
@@ -57,7 +56,6 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animatorHud = GameObject.FindGameObjectWithTag("hudPersonaje").GetComponent<Animator>();
-        door = GameObject.FindGameObjectWithTag("Puerta").GetComponent<Puerta>();
         velocidadF = velocidad;
     }
 
@@ -269,12 +267,6 @@ public class PlayerController : MonoBehaviour
             fragmentos += 10;
             Destroy(collision.gameObject);
             Puntos();
-        }
-
-        if (collision.CompareTag("Llave"))
-        {
-            Destroy(collision.gameObject);
-            door.llave = true;
         }
 
     }
