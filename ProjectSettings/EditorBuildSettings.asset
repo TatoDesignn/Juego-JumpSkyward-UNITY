@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/JumpSkyWard/Scenes/Home.unity
+    guid: 767a67fc81a6a754eb23b5978f197862
+  - enabled: 1
+    path: Assets/JumpSkyWard/Scenes/Tutorial.unity
+    guid: 881bc50af298abb488f1ffca54943e2d
+  - enabled: 1
     path: Assets/JumpSkyWard/Scenes/Nivel1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     bool moving;
     bool moving2;
     bool enMovimiento;
+    public bool canMove = true;
     bool canJump;
     bool canDown;
     bool arma = false;
@@ -50,19 +51,25 @@ public class PlayerController : MonoBehaviour
     int fragmentos = 0;
     public int salud = 3;
     float velocidadF;
+    string escena;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animatorHud = GameObject.FindGameObjectWithTag("hudPersonaje").GetComponent<Animator>();
+        escena = SceneManager.GetActiveScene().name;
+        canMove = true;
         velocidadF = velocidad;
     }
 
     void Update()
     {
-        Movimiento();
-        Ataque();
+        if (canMove == true)
+        {
+            Movimiento();
+            Ataque();
+        }
     }
 
     private void Movimiento()
@@ -130,16 +137,19 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector2 newVelocity;
-        newVelocity.x = Input.GetAxisRaw("Horizontal") * velocidad;
-        newVelocity.y = rb.velocity.y;
-        if (escala)
+        if (canMove == true)
         {
-            newVelocity.y = Input.GetAxisRaw("Vertical") * 3;
-        }
-         
+            Vector2 newVelocity;
+            newVelocity.x = Input.GetAxisRaw("Horizontal") * velocidad;
+            newVelocity.y = rb.velocity.y;
+            if (escala)
+            {
+                newVelocity.y = Input.GetAxisRaw("Vertical") * 3;
+            }
 
-        rb.velocity = newVelocity;
+
+            rb.velocity = newVelocity;
+        }
     }
 
     private void Daño()
@@ -191,6 +201,19 @@ public class PlayerController : MonoBehaviour
         Invoke("Resetear", 2f);
     }
 
+    public void Quieto()
+    {
+        rb.velocity = new Vector2 (0, 0);
+        canMove = false;
+        animator.SetTrigger("Idle");
+    }
+
+    public void Normalidad()
+    {
+
+        canMove = true;
+    }
+
     private void Inmovil()
     {
         espada.SetActive(false);
@@ -213,7 +236,7 @@ public class PlayerController : MonoBehaviour
 
     private void Resetear()
     {
-        SceneManager.LoadScene("Nivel1");
+        SceneManager.LoadScene(escena);
     }
 
     private void Puntos()

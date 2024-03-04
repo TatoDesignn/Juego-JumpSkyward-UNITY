@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
 
     private void Jugar2()
     {
-        SceneManager.LoadScene("Nivel1");
+        SceneManager.LoadScene(1);
     }
 
     public void Salir()
