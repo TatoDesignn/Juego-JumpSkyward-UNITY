@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (canMove == true)
+        if (canMove)
         {
             Movimiento();
             Ataque();
@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (canMove == true)
+        if (canMove)
         {
             Vector2 newVelocity;
             newVelocity.x = Input.GetAxisRaw("Horizontal") * velocidad;

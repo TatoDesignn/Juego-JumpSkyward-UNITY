@@ -3956,7 +3956,7 @@ MonoBehaviour:
   dialogueText: {fileID: 443157544}
   dialogueLines:
   - "Este espacio es muy peque\xF1o, por suerte puedes agacharte y pasar facilmente,
-    agacharte te servira mucho para esquivar diferemtes obstaculos"
+    agacharte te servira mucho para esquivar diferentes obstaculos"
   - Utiliza la tecla "S" para agacharte
   tiempoEspera: 0.05
 --- !u!1 &389275094
@@ -6542,7 +6542,7 @@ MonoBehaviour:
     que no golpea muy duro..."
   - pero no te preocupes he oido de un arma mas poderosa extraviada en alguna parte
     del planeta, presta MUCHA ATENCION!.
-  - Utiliza el click izquierdo del raton para golpear con el arma!
+  - Utiliza el "click izquierdo" del raton para golpear con el arma!
   tiempoEspera: 0.05
 --- !u!1 &823633635
 GameObject:
