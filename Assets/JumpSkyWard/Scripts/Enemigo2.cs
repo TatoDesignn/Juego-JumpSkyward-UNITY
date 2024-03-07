@@ -54,7 +54,7 @@ public class Enemigo2 : MonoBehaviour
         {
             animator.SetTrigger("Hit");
         }
-        else if (vida == 0)
+        else if (vida <= 0)
         {
             muerte = true;
             animator.SetTrigger("Dead");

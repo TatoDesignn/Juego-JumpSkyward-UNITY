@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [Header("Armas: ")]
     public GameObject mano;
     public GameObject espada;
+    public GameObject martillo;
     public GameObject mira;
 
     [Space]
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
     bool canJump;
     bool canDown;
     bool arma = false;
+    bool arma2 = false;
     bool escala = false;
     bool mover = true;
     int fragmentos = 0;
@@ -128,7 +130,7 @@ public class PlayerController : MonoBehaviour
             tiempoSiguienteAtaque -= Time.deltaTime;
         }
 
-        if (Input.GetMouseButtonDown(0) && tiempoSiguienteAtaque <= 0 && arma)
+        if (Input.GetMouseButtonDown(0) && tiempoSiguienteAtaque <= 0 && (arma || arma2))
         {
             tiempoSiguienteAtaque = tiempoEntreAtaque;
             Daño();
@@ -161,11 +163,25 @@ public class PlayerController : MonoBehaviour
         {
             if (collisionador.CompareTag("Enemigo"))
             {
-                collisionador.transform.GetComponent<Enemigo1>().Daño(1);
+                if(arma)
+                {
+                    collisionador.transform.GetComponent<Enemigo1>().Daño(1);
+                }
+                else if (arma2)
+                {
+                    collisionador.transform.GetComponent<Enemigo1>().Daño(2);
+                }
             }
             if (collisionador.CompareTag("Enemigo2"))
             {
-                collisionador.transform.GetComponent<Enemigo2>().Daño(1);
+                if (arma)
+                {
+                    collisionador.transform.GetComponent<Enemigo2>().Daño(1);
+                }
+                else if (arma2)
+                {
+                    collisionador.transform.GetComponent<Enemigo2>().Daño(2);
+                }
             }
         }
     }
@@ -226,12 +242,20 @@ public class PlayerController : MonoBehaviour
 
     public void Restablecer()
     {
-        espada.SetActive(true);
         mano.SetActive(true);
         mover = true;
         canDown = true;
         canJump = true;
         velocidad = velocidadF;
+
+        if (arma)
+        {
+            espada.SetActive(true);
+        }
+        else if (arma2)
+        {
+            martillo.SetActive(true);
+        }
     }
 
     private void Resetear()
@@ -252,7 +276,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.collider.tag == "Suelo")
+        if(collision.collider.tag == "Suelo" || collision.collider.tag == "Tuberia")
         {
             canJump = true;
             canDown = true;
@@ -267,7 +291,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Suelo")
+        if (collision.collider.tag == "Suelo" || collision.collider.tag == "Tuberia")
         {
             animator.SetBool("Suelo", false);
             canDown = false;
@@ -280,10 +304,24 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             arma = true;
+            arma2 = false;
+            martillo.SetActive(false);
             mano.SetActive(true);
             espada.SetActive(true);
             mira.SetActive(true);
         }
+
+        if (collision.CompareTag("Arma2"))
+        {
+            Destroy(collision.gameObject);
+            arma2 = true;
+            arma = false;
+            espada.SetActive(false);
+            mano.SetActive(true);
+            martillo.SetActive(true);
+            mira.SetActive(true);
+        }
+
 
         if (collision.CompareTag("Fragmento"))
         {

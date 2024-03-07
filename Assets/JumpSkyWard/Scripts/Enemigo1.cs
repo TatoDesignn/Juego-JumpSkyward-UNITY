@@ -90,7 +90,7 @@ public class Enemigo1 : MonoBehaviour
                 Girar(4);
                 animator.SetTrigger("Hit");
             }
-            else if (vida == 0)
+            else if (vida <= 0)
             {
                 velocidad = 0;
                 animator.SetTrigger("Muerte");
@@ -104,7 +104,7 @@ public class Enemigo1 : MonoBehaviour
                 velocidad += 4;
                 animator.SetTrigger("Hit");
             }
-            else if (vida == 0)
+            else if (vida <= 0)
             {
                 velocidad = 0;
                 animator.SetTrigger("Muerte");

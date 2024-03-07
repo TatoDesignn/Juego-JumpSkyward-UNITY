@@ -20,6 +20,8 @@ TagManager:
   - Llave
   - Puerta
   - Restablecer
+  - Arma2
+  - Tuberia
   layers:
   - Default
   - TransparentFX
@@ -34,7 +36,7 @@ TagManager:
   - Muerte
   - Caida
   - Bala
-  - 
+  - Tuberia
   - 
   - 
   - 
