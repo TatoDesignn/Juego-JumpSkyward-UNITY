@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Puerta : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Puerta : MonoBehaviour
                 letrero2.SetActive(true);
                 if (Input.GetKey(KeyCode.E))
                 {
-
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
         }
