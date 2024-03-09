@@ -61,6 +61,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         animatorHud = GameObject.FindGameObjectWithTag("hudPersonaje").GetComponent<Animator>();
         escena = SceneManager.GetActiveScene().name;
+        GameManager.Instance.ActivaArma();
         canMove = true;
         velocidadF = velocidad;
     }
@@ -233,6 +234,7 @@ public class PlayerController : MonoBehaviour
     private void Inmovil()
     {
         espada.SetActive(false);
+        martillo.SetActive(false);
         mano.SetActive(false);
         mover = false;
         canDown = false;
@@ -268,6 +270,26 @@ public class PlayerController : MonoBehaviour
         texto.text = ": " + fragmentos.ToString();
     }
 
+    public void Arma1()
+    {
+        arma = true;
+        arma2 = false;
+        martillo.SetActive(false);
+        mano.SetActive(true);
+        espada.SetActive(true);
+        mira.SetActive(true);
+    }
+
+    public void Arma2()
+    {
+        arma2 = true;
+        arma = false;
+        espada.SetActive(false);
+        mano.SetActive(true);
+        martillo.SetActive(true);
+        mira.SetActive(true);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = UnityEngine.Color.green;
@@ -278,8 +300,8 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.collider.tag == "Suelo" || collision.collider.tag == "Tuberia")
         {
-            canJump = true;
             canDown = true;
+            canJump = true;
             animator.SetBool("Suelo", true);
         }
 
@@ -302,24 +324,18 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("Arma"))
         {
+            GameManager.Instance.arma = true;
+            GameManager.Instance.arma2 = false;
             Destroy(collision.gameObject);
-            arma = true;
-            arma2 = false;
-            martillo.SetActive(false);
-            mano.SetActive(true);
-            espada.SetActive(true);
-            mira.SetActive(true);
+            Arma1();
         }
 
         if (collision.CompareTag("Arma2"))
         {
+            GameManager.Instance.arma2 = true;
+            GameManager.Instance.arma = false;
             Destroy(collision.gameObject);
-            arma2 = true;
-            arma = false;
-            espada.SetActive(false);
-            mano.SetActive(true);
-            martillo.SetActive(true);
-            mira.SetActive(true);
+            Arma2();
         }
 
 
