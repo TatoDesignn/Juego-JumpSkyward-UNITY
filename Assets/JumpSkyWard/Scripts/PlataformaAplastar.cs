@@ -67,8 +67,7 @@ public class PlataformaAplastar : MonoBehaviour
                 velocidad = 2;
             }
 
-            player.salud -= 1;
-            player.Vida();
+            player.Vida(1);
         }
     }
 }

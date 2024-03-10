@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [Header("Variables Personajes:")]
     public bool arma;
     public bool arma2;
+    public int puntaje = 0;
+    public int vida = 3;
 
     private void Awake()
     {

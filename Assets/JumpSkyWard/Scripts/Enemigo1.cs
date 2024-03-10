@@ -132,8 +132,7 @@ public class Enemigo1 : MonoBehaviour
     {
         if (collision.collider.CompareTag("Personaje"))
         {
-            player.salud -= 1;
-            player.Vida();
+            player.Vida(1);
             Girar(4);
         }
     }

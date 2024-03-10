@@ -8,6 +8,13 @@ public class Puerta : MonoBehaviour
     public bool llave = false;
     public GameObject letrero;
     public GameObject letrero2;
+    public GameObject panel;
+
+    private void Start()
+    {
+        letrero.SetActive(false);
+        letrero2.SetActive(false);
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -16,32 +23,35 @@ public class Puerta : MonoBehaviour
             if (!llave)
             {
                 letrero.SetActive(true);
+                letrero2.SetActive(false);
             }
             else if(llave)
             {
                 letrero2.SetActive(true);
+                letrero.SetActive(false);
+
                 if (Input.GetKey(KeyCode.E))
                 {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                    panel.SetActive(true);
+                    Invoke("Cambiar", 2f);
                 }
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void Cambiar()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    /*private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Personaje"))
         {
-            if (!llave)
-            {
-                letrero.SetActive(false);
-            }
-            else if (llave)
-            {
-                letrero2.SetActive(false);
-            }
+            letrero.SetActive(false);
+            letrero2.SetActive(false);
         }
-    }
+    }*/
 
 
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
@@ -23,6 +24,7 @@ public class PlayerController : MonoBehaviour
     public GameObject espada;
     public GameObject martillo;
     public GameObject mira;
+    public GameObject escudo;
 
     [Space]
     [Header("Control Ataque: ")]
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour
     bool escala = false;
     bool mover = true;
     int fragmentos = 0;
-    public int salud = 3;
+    public int salud;
     float velocidadF;
     string escena;
 
@@ -62,8 +64,13 @@ public class PlayerController : MonoBehaviour
         animatorHud = GameObject.FindGameObjectWithTag("hudPersonaje").GetComponent<Animator>();
         escena = SceneManager.GetActiveScene().name;
         GameManager.Instance.ActivaArma();
+        fragmentos = GameManager.Instance.puntaje;
+        salud = GameManager.Instance.vida;
+        Puntos();
+        VidaActual();
         canMove = true;
         velocidadF = velocidad;
+        escudo.SetActive(false);
     }
 
     void Update()
@@ -187,26 +194,50 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Vida()
+    public void Vida(int Daño)
     {
-        if(salud == 2)
+        if (!escudo.activeInHierarchy)
         {
-            Inmovil();
-            animator.SetTrigger("Hit");
+            salud -= Daño;
+
+            if (salud == 2)
+            {
+                Inmovil();
+                animator.SetTrigger("Hit");
+                animatorHud.SetTrigger("V2");
+                Invoke("Restablecer", 0.8f);
+            }
+            else if (salud == 1)
+            {
+                Inmovil();
+                animator.SetTrigger("Hit");
+                animatorHud.SetTrigger("V1");
+                Invoke("Restablecer", 0.8f);
+            }
+            else if (salud == 0)
+            {
+                Muerte();
+                animatorHud.SetTrigger("V0");
+            }
+        }
+        else
+        {
+            escudo.SetActive(false);
+        }
+
+        GameManager.Instance.vida = salud;
+    }
+
+    public void VidaActual()
+    {
+
+        if (salud == 2)
+        {
             animatorHud.SetTrigger("V2");
-            Invoke("Restablecer", 0.8f);
         }
-        else if(salud == 1)
+        else if (salud == 1)
         {
-            Inmovil();
-            animator.SetTrigger("Hit");
             animatorHud.SetTrigger("V1");
-            Invoke("Restablecer", 0.8f);
-        }
-        else if(salud == 0)
-        {
-            Muerte();
-            animatorHud.SetTrigger("V0");
         }
     }
 
@@ -215,6 +246,7 @@ public class PlayerController : MonoBehaviour
         Inmovil();
         animatorHud.SetTrigger("V0");
         animator.SetTrigger("Muerte");
+        GameManager.Instance.puntaje = 0;
         Invoke("Resetear", 2f);
     }
 
@@ -342,10 +374,16 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Fragmento"))
         {
             fragmentos += 10;
+            GameManager.Instance.puntaje = fragmentos;
             Destroy(collision.gameObject);
             Puntos();
         }
 
+        if (collision.CompareTag("PowerUp"))
+        {
+            Destroy(collision.gameObject);
+            escudo.SetActive(true);
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

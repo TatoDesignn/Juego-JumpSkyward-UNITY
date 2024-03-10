@@ -22,8 +22,7 @@ public class BalaEnemigo : MonoBehaviour
     {
         if(collision.TryGetComponent(out PlayerController player))
         {
-            player.salud -= 1;
-            player.Vida();
+            player.Vida(1);
             Destroy(gameObject);
         }
     }

@@ -3955,8 +3955,8 @@ MonoBehaviour:
   dialoguePressE: {fileID: 1714212349}
   dialogueText: {fileID: 443157544}
   dialogueLines:
-  - "Este espacio es muy peque\xF1o, por suerte puedes agacharte y pasar facilmente,
-    agacharte te servira mucho para esquivar diferentes obstaculos"
+  - "Este espacio es muy peque\xF1o, por suerte puedes agacharte y pasar f\xE1cilmente,
+    agacharte te servir\xE1 mucho para esquivar diferentes obst\xE1culos"
   - Utiliza la tecla "S" para agacharte
   tiempoEspera: 0.05
 --- !u!1 &389275094
@@ -4053,7 +4053,7 @@ MonoBehaviour:
   dialoguePressE: {fileID: 1714212349}
   dialogueText: {fileID: 443157544}
   dialogueLines:
-  - Parece que hay un Cyber al frente, DESTRUYELO!.
+  - Parece que hay un Cyber al frente, DESTRUYELO!
   tiempoEspera: 0.05
 --- !u!1 &443157543
 GameObject:
@@ -4095,7 +4095,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b6340f2f732690340967fe6f51680a11, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: be8781f0c4e26f14bb2caee50ec07d88, type: 2}
   m_sharedMaterial: {fileID: 7627870452886770498, guid: b6340f2f732690340967fe6f51680a11, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4159,7 +4159,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &443157545
@@ -6424,9 +6424,9 @@ MonoBehaviour:
   dialoguePressE: {fileID: 1714212349}
   dialogueText: {fileID: 443157544}
   dialogueLines:
-  - Hola, Bienvenido al planeta de Zephyria, veo que chocaste con una tormenta de
-    materia oscura. Adentrate a las profundidades de este mundo y descubramos como
-    saldremos de aqui!.
+  - "Hola, Bienvenido al planeta de Zephyria, veo que chocaste con una tormenta de
+    materia oscura, ad\xE9ntrate a las profundidades de este mundo y descubramos
+    como saldremos de aqu\xED!"
   - Utiliza las teclas "A" y "D" para moverte hacia los lados
   tiempoEspera: 0.05
 --- !u!4 &669843418
@@ -6538,11 +6538,11 @@ MonoBehaviour:
   dialoguePressE: {fileID: 1714212349}
   dialogueText: {fileID: 443157544}
   dialogueLines:
-  - "Vaya\u2026 Parece que has recogido la espada de un guerrero de Zephyria, veo
-    que no golpea muy duro..."
-  - pero no te preocupes he oido de un arma mas poderosa extraviada en alguna parte
-    del planeta, presta MUCHA ATENCION!.
-  - Utiliza el "click izquierdo" del raton para golpear con el arma!
+  - "Vaya!, Parece que has recogido la espada de un guerrero de Zephyria, veo que
+    no hace mucho da\xF1o!"
+  - "Pero no te preocupes he o\xEDdo de un arma m\xE1s poderosa extraviada en alguna
+    parte del planeta, presta MUCHA ATENCI\xD3N!"
+  - "Utiliza el \"CLICK IZQUIERDO\" del rat\xF3n para golpear con el arma"
   tiempoEspera: 0.05
 --- !u!1 &823633635
 GameObject:
@@ -6650,9 +6650,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 111b959af5378234f82bc9d241a09b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1295439445}
   arma: 0
   arma2: 0
+  puntaje: 0
+  vida: 3
 --- !u!4 &829360924
 Transform:
   m_ObjectHideFlags: 0
@@ -6795,7 +6796,7 @@ MonoBehaviour:
   dialoguePressE: {fileID: 1714212349}
   dialogueText: {fileID: 443157544}
   dialogueLines:
-  - CUIDADO! hay un rayo laser al frente, si lo tocas moriras enseguida!!!
+  - "CUIDADO! hay un rayo l\xE1ser al frente, si lo tocas morir\xE1s enseguida!!!"
   - Utiliza la tecla "ESPACIO" para saltar!
   tiempoEspera: 0.05
 --- !u!1 &951225586
@@ -9066,103 +9067,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1167633599
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1167633603}
-  - component: {fileID: 1167633602}
-  - component: {fileID: 1167633601}
-  - component: {fileID: 1167633600}
-  m_Layer: 5
-  m_Name: Transcion
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!95 &1167633600
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167633599}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3e61552591761ee429fbccb3c8649e61, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1167633601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167633599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1167633602
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167633599}
-  m_CullTransparentMesh: 1
---- !u!224 &1167633603
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1167633599}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 558001197}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1169017696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9225,17 +9129,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1693388097269534056, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
   m_PrefabInstance: {fileID: 1394717633}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1295439445 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8231571726385017533, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
-  m_PrefabInstance: {fileID: 1394717633}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3ea9f9efdff80b40821560397e7aef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1394717633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9296,6 +9189,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje
       objectReference: {fileID: 0}
+    - target: {fileID: 8231571726385017533, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
+      propertyPath: texto
+      value: 
+      objectReference: {fileID: 1536898998}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9461,11 +9358,24 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1565930947749585773, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 823633636}
-    - targetCorrespondingSourceObject: {fileID: 1565930947749585773, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1167633603}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+--- !u!1 &1536898997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6478509749290086762, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+  m_PrefabInstance: {fileID: 1536898996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1536898998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 388486245242762364, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+  m_PrefabInstance: {fileID: 1536898996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663372508
 GameObject:
   m_ObjectHideFlags: 0
@@ -9496,7 +9406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3cc5f5696afbe4eb5c4162acdc302d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 1167633599}
+  panel: {fileID: 1536898997}
 --- !u!61 &1663372510
 BoxCollider2D:
   m_ObjectHideFlags: 0
