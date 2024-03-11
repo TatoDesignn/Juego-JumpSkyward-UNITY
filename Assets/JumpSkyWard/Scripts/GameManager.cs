@@ -7,12 +7,13 @@ public class GameManager : MonoBehaviour
     
     public static GameManager Instance;
     PlayerController controller;
+    Tienda tienda;
 
     [Header("Variables Personajes:")]
     public bool arma;
     public bool arma2;
-    public int puntaje = 0;
-    public int vida = 3;
+    public int puntaje;
+    public int vida;
 
     private void Awake()
     {
@@ -42,6 +43,21 @@ public class GameManager : MonoBehaviour
         else if(arma2)
         {
             controller.Arma2();
+        }
+    }
+
+    public void ComprarVida()
+    {
+        controller = GameObject.FindGameObjectWithTag("Personaje").GetComponent<PlayerController>();
+        tienda = GameObject.FindGameObjectWithTag("Tienda").GetComponent<Tienda>();
+
+        if (controller.salud < 3 && controller.fragmentos >= 150)
+        {
+            controller.salud += 1;
+            controller.fragmentos -= 150;
+            controller.VidaActual();
+            controller.Puntos();
+            tienda.Reanudar();
         }
     }
 }

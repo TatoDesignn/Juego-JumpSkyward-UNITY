@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 49535321}
   - component: {fileID: 49535322}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48297,7 +48297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 197642636}
   - component: {fileID: 197642637}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48587,7 +48587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 207833259}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48624,7 +48624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 212917882}
   - component: {fileID: 212917883}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48785,7 +48785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8014974703576123122, guid: 1f7d610af82b42d4796f77abc7ed4aba, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2639155152699729792, guid: 1f7d610af82b42d4796f77abc7ed4aba, type: 3}
@@ -48868,7 +48868,7 @@ GameObject:
   m_Component:
   - component: {fileID: 250675568}
   - component: {fileID: 250675569}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49066,7 +49066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 297990493}
   - component: {fileID: 297990494}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49315,7 +49315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394511793}
   - component: {fileID: 394511794}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49512,8 +49512,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
+      propertyPath: vida
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
       propertyPath: arma2
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
+      propertyPath: puntaje
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3245725833588963728, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49573,7 +49581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458091880}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49610,7 +49618,7 @@ GameObject:
   m_Component:
   - component: {fileID: 481993991}
   - component: {fileID: 481993992}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49694,7 +49702,7 @@ GameObject:
   m_Component:
   - component: {fileID: 482335971}
   - component: {fileID: 482335972}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49778,7 +49786,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490991499}
   - component: {fileID: 490991500}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49924,7 +49932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523611539}
   - component: {fileID: 523611540}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50081,7 +50089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 574811961}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Primera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50247,7 +50255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 602046236}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50352,6 +50360,74 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3.8952065}
   m_EdgeRadius: 0
+--- !u!1 &617292411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 617292414}
+  - component: {fileID: 617292413}
+  - component: {fileID: 617292412}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &617292412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617292411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &617292413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617292411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &617292414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617292411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &623655169 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4122481840528094895, guid: 15507a4a9ce1af54c802bef00de4bca8, type: 3}
@@ -50434,7 +50510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 695515655}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50572,7 +50648,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 730238039}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Fondos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50755,6 +50831,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1565930947749585773, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4719665088725899769, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7573982658008265835, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
@@ -50943,7 +51023,7 @@ GameObject:
   m_Component:
   - component: {fileID: 842415340}
   - component: {fileID: 842415341}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51027,7 +51107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 855512880}
   - component: {fileID: 855512881}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51111,7 +51191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 864157001}
   - component: {fileID: 864157002}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51194,7 +51274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869471109}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51232,7 +51312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902970431}
   - component: {fileID: 902970432}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51430,7 +51510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 990930833}
   - component: {fileID: 990930834}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51514,7 +51594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 998864590}
   - component: {fileID: 998864591}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51598,7 +51678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054584078}
   - component: {fileID: 1054584079}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51682,7 +51762,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1079903531}
   - component: {fileID: 1079903532}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51975,7 +52055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159811883}
   - component: {fileID: 1159811884}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52069,7 +52149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1167918431}
   - component: {fileID: 1167918432}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52223,7 +52303,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1199837207}
   - component: {fileID: 1199837208}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52439,7 +52519,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1218392401}
   - component: {fileID: 1218392402}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52523,7 +52603,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1228225637}
   - component: {fileID: 1228225638}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52760,7 +52840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1323851271}
   - component: {fileID: 1323851272}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52844,7 +52924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1344940694}
   - component: {fileID: 1344940695}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52928,7 +53008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1370353864}
   - component: {fileID: 1370353865}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53102,7 +53182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1402265943}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53316,7 +53396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1431141942}
   - component: {fileID: 1431141943}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53400,7 +53480,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1432910062}
   - component: {fileID: 1432910063}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53546,7 +53626,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1511014886}
   - component: {fileID: 1511014887}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53640,7 +53720,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1563465269}
   - component: {fileID: 1563465270}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53734,7 +53814,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582206335}
   - component: {fileID: 1582206336}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53856,7 +53936,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1613588424}
   - component: {fileID: 1613588425}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54564,7 +54644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1728017778}
   - component: {fileID: 1728017779}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54771,7 +54851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768023830}
   - component: {fileID: 1768023831}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55051,7 +55131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1851380048}
   - component: {fileID: 1851380049}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55197,7 +55277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1877619811}
   - component: {fileID: 1877619812}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55396,7 +55476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1920794434}
   - component: {fileID: 1920794435}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55480,7 +55560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1941985728}
   - component: {fileID: 1941985729}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55771,7 +55851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1981633905}
   - component: {fileID: 1981633906}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55860,7 +55940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2008406100}
   - component: {fileID: 2008406101}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56006,7 +56086,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2017053163}
   - component: {fileID: 2017053164}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56153,7 +56233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2027428413}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Segunda (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56340,7 +56420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2071783104}
   - component: {fileID: 2071783105}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56424,7 +56504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074412772}
   - component: {fileID: 2074412773}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fondo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56742,3 +56822,4 @@ SceneRoots:
   - {fileID: 2020566945}
   - {fileID: 1718535226}
   - {fileID: 707262207}
+  - {fileID: 617292414}

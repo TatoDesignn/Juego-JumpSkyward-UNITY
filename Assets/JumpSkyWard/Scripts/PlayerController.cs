@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
     bool arma2 = false;
     bool escala = false;
     bool mover = true;
-    int fragmentos = 0;
+    public int fragmentos = 0;
     public int salud;
     float velocidadF;
     string escena;
@@ -230,7 +230,10 @@ public class PlayerController : MonoBehaviour
 
     public void VidaActual()
     {
-
+        if (salud == 3)
+        {
+            animatorHud.SetTrigger("V3");
+        }
         if (salud == 2)
         {
             animatorHud.SetTrigger("V2");
@@ -239,6 +242,7 @@ public class PlayerController : MonoBehaviour
         {
             animatorHud.SetTrigger("V1");
         }
+        GameManager.Instance.vida = salud;
     }
 
     private void Muerte()
@@ -247,6 +251,7 @@ public class PlayerController : MonoBehaviour
         animatorHud.SetTrigger("V0");
         animator.SetTrigger("Muerte");
         GameManager.Instance.puntaje = 0;
+        GameManager.Instance.vida = 3;
         Invoke("Resetear", 2f);
     }
 
@@ -297,9 +302,10 @@ public class PlayerController : MonoBehaviour
         SceneManager.LoadScene(escena);
     }
 
-    private void Puntos()
+    public void Puntos()
     {
         texto.text = ": " + fragmentos.ToString();
+        GameManager.Instance.puntaje = fragmentos;
     }
 
     public void Arma1()

@@ -15696,6 +15696,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4948662374172761238, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5683800624768859646, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -15727,10 +15731,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
       propertyPath: arma
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
+      propertyPath: vida
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
       propertyPath: arma2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761167600247984311, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
+      propertyPath: puntaje
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3245725833588963728, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}

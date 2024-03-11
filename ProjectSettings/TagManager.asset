@@ -23,11 +23,12 @@ TagManager:
   - Arma2
   - Tuberia
   - PowerUp
+  - Tienda
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Mapa
   - Water
   - UI
   - Suelo
