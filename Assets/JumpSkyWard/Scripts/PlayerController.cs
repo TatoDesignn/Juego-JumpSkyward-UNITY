@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -25,6 +26,7 @@ public class PlayerController : MonoBehaviour
     public GameObject martillo;
     public GameObject mira;
     public GameObject escudo;
+    public GameObject activarEscudo;
 
     [Space]
     [Header("Control Ataque: ")]
@@ -41,19 +43,23 @@ public class PlayerController : MonoBehaviour
     public TextMeshProUGUI texto;
 
     [Space]
-    [Header("Variable globales: ")]
+    [Header("Variable Globales: ")]
+    public int fragmentos = 0;
+    public int salud;
+    public bool tieneEscudo = false;
+    public bool canMove = true;
+
+    [Space]
+    [Header("Variable Locales: ")]
     bool moving;
     bool moving2;
     bool enMovimiento;
-    public bool canMove = true;
     bool canJump;
     bool canDown;
     bool arma = false;
     bool arma2 = false;
     bool escala = false;
     bool mover = true;
-    public int fragmentos = 0;
-    public int salud;
     float velocidadF;
     string escena;
 
@@ -66,6 +72,8 @@ public class PlayerController : MonoBehaviour
         GameManager.Instance.ActivaArma();
         fragmentos = GameManager.Instance.puntaje;
         salud = GameManager.Instance.vida;
+        tieneEscudo = GameManager.Instance.escudo;
+        Escudo();
         Puntos();
         VidaActual();
         canMove = true;
@@ -128,6 +136,13 @@ public class PlayerController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.S))
         {
             animator.SetTrigger("Parado");
+        }
+
+        if(Input.GetKey(KeyCode.C) && tieneEscudo)
+        {
+            escudo.SetActive(true); 
+            tieneEscudo = false;
+            Escudo();
         }
     }
 
@@ -192,6 +207,19 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Escudo()
+    {
+        if(tieneEscudo)
+        {
+            activarEscudo.SetActive(true);
+        }
+        else if (!tieneEscudo)
+        {
+            activarEscudo.SetActive(false); 
+        }
+        GameManager.Instance.escudo = tieneEscudo;
     }
 
     public void Vida(int Daño)

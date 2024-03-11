@@ -49567,6 +49567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3606238517093335072, guid: c0f0a8a8f5371f54b94f7cdc949983f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50439,6 +50443,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &635654825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4657291498539711297, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+  m_PrefabInstance: {fileID: 797204923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &641695978
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52442,6 +52451,10 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 713118431}
+    - target: {fileID: 8231571726385017533, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
+      propertyPath: activarEscudo
+      value: 
+      objectReference: {fileID: 635654825}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

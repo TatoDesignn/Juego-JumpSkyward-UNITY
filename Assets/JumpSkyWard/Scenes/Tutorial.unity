@@ -6656,6 +6656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arma: 0
   arma2: 0
+  escudo: 0
   puntaje: 0
   vida: 3
 --- !u!4 &829360924
@@ -9209,6 +9210,10 @@ PrefabInstance:
       propertyPath: texto
       value: 
       objectReference: {fileID: 1536898998}
+    - target: {fileID: 8231571726385017533, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
+      propertyPath: activarEscudo
+      value: 
+      objectReference: {fileID: 1536898999}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9448,6 +9453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1536898999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4657291498539711297, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+  m_PrefabInstance: {fileID: 1536898996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1663372508
 GameObject:
   m_ObjectHideFlags: 0

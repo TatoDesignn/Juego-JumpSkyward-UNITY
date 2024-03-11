@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Variables Personajes:")]
     public bool arma;
     public bool arma2;
+    public bool escudo;
     public int puntaje;
     public int vida;
 
@@ -56,6 +57,21 @@ public class GameManager : MonoBehaviour
             controller.salud += 1;
             controller.fragmentos -= 150;
             controller.VidaActual();
+            controller.Puntos();
+            tienda.Reanudar();
+        }
+    }
+
+    public void ComprarEscudo()
+    {
+        controller = GameObject.FindGameObjectWithTag("Personaje").GetComponent<PlayerController>();
+        tienda = GameObject.FindGameObjectWithTag("Tienda").GetComponent<Tienda>();
+
+        if(controller.tieneEscudo == false &&  controller.fragmentos >= 150)
+        {
+            controller.tieneEscudo = true;
+            controller.fragmentos -= 150;
+            controller.Escudo();
             controller.Puntos();
             tienda.Reanudar();
         }
