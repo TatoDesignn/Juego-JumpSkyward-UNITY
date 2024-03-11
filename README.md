@@ -56,7 +56,8 @@
 </ol>
 <h2>Mas Información 💾</h2>
 <ul>
-  <li><a href="https://www.youtube.com/watch?v=q_EAfGq9DEc">Link video del juego</li>
+  <li><a href="https://www.youtube.com/watch?v=q_EAfGq9DEc">Link video del juego v0.1</li>
+  <li><a href="https://www.youtube.com/watch?v=zbQpEwd0dSs">Link video del juego v0.2</li>
   <li><a href="https://www.canva.com/design/DAF9jJxA8sE/wHQfCNZ8P3p0dWzCN2eqYQ/edit?utm_content=DAF9jJxA8sE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Link presentación Canva</li>
 </ul>
 <h2>Creditos ⭐</h2>
