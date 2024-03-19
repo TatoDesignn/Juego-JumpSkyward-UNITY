@@ -27,7 +27,7 @@
 <strong>Prototipo de nivel en papel: </strong>
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/DiseñoPapelNivel1.jpg">
 <strong>Nivel digital: </strong>
-<img style="width: 500px; height: auto;" src="https://cdn.discordapp.com/attachments/1001222483120230501/1216794263854256129/image.png?ex=6601aef7&is=65ef39f7&hm=42f0448ef43e0b658b025dcc5debb37a6867b1727b5b0f7da5404cbe4969967f&">
+<img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/NivelDigital1.png">
 <h2>Nivel 2 ☀️</h2>
 <p>Este nivel genera un reto mayor para los jugadores, donde deberas superar diferentes retos, como las plataformas de caida donde debes calcular muy bien el tiempo para pasar a la siguiente, añadimos un nuevo obstaculo al que hemos llamado "Aplastar" debes de pasar rapido para esquivar sus pinchos, cuenta con los mismos enemigos el "Cyber" y el "Cañon".</p>
 <strong>Prototipo de nivel en papel: </strong>
