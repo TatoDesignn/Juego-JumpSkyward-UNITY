@@ -34,6 +34,20 @@
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/DiseñoPapelNivel2.jpg">
 <strong>Nivel digital: </strong>
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/NivelDigital2.png">
+<h2>Logros 🏆</h2>
+<ul>
+  <li><strong>Primeros Pasos:</strong> Completa el tutorial del juego.</li>
+  <li><strong>Explorador de Secretos:</strong> Encuentra tu primer área secreta.</li>
+  <li><strong>Invencible:</strong> Completa un nivel sin recibir daño.</li>
+  <li><strong>Coleccionista de fragmentos:</strong> Recolecta todos los fragmentos del nivel.</li>
+  <li><strong>Temperaturas altas:</strong> Muere contra un rayo laser.</li>
+  <li><strong>Capitan al mando:</strong> Maneja un cohete.</li>
+  <li><strong>Astronauta ahorrativo:</strong> Consigue todos los fragmentos de los niveles sin gastar ninguno.</li>
+  <li><strong>El primer fierro:</strong> Consigue tu primer arma.</li>
+  <li><strong>Rey saltarin:</strong> Salta 25 veces.</li>
+  <li><strong>Maestro:</strong> Presiona las teclas ocultas.</li>
+</ul>
+<img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/TodosLogros.png">
 <h2>Instrucciones 🕹️</h2>
 <ol>
   <li><strong>Controles: </strong></li>
