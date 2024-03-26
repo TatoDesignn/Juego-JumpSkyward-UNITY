@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     public int salud;
     public bool tieneEscudo = false;
     public bool canMove = true;
+    public bool invencible = true;
 
     [Space]
     [Header("Variable Locales: ")]
@@ -62,6 +63,7 @@ public class PlayerController : MonoBehaviour
     bool mover = true;
     float velocidadF;
     string escena;
+    int saltos = 0;
 
     void Start()
     {
@@ -120,6 +122,7 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * saltar, ForceMode2D.Impulse);
             canJump = false;
             animator.SetTrigger("Jump");
+            LogrosManager.Instance.contadorDeSaltos += 1;
         }
 
         animator.ResetTrigger("Parado");
@@ -227,6 +230,7 @@ public class PlayerController : MonoBehaviour
         if (!escudo.activeInHierarchy)
         {
             salud -= Daño;
+            invencible = false;
 
             if (salud == 2)
             {
@@ -280,7 +284,7 @@ public class PlayerController : MonoBehaviour
         animator.SetTrigger("Muerte");
         GameManager.Instance.puntaje = 0;
         GameManager.Instance.vida = 3;
-        Invoke("Resetear", 2f);
+        Invoke("Resetear", 3f);
     }
 
     public void Quieto()
@@ -373,6 +377,7 @@ public class PlayerController : MonoBehaviour
 
         if (collision.collider.tag == "Laser")
         {
+            LogrosManager.Instance.TemperaturasAltas();
             Muerte();
         }
     }
@@ -392,6 +397,7 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.arma = true;
             GameManager.Instance.arma2 = false;
+            LogrosManager.Instance.PrimerFierro();
             Destroy(collision.gameObject);
             Arma1();
         }
@@ -400,6 +406,7 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.arma2 = true;
             GameManager.Instance.arma = false;
+            LogrosManager.Instance.ExploradorSecretos();
             Destroy(collision.gameObject);
             Arma2();
         }
@@ -408,6 +415,7 @@ public class PlayerController : MonoBehaviour
         if (collision.CompareTag("Fragmento"))
         {
             fragmentos += 10;
+            LogrosManager.Instance.fragmentosRecogidos += 1;
             GameManager.Instance.puntaje = fragmentos;
             Destroy(collision.gameObject);
             Puntos();

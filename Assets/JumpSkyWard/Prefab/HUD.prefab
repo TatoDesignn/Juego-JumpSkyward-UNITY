@@ -725,6 +725,111 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &7382086698090439748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7987059517377314886}
+  - component: {fileID: 2319324972846745219}
+  - component: {fileID: 1648043997409151589}
+  - component: {fileID: 8077007538519234064}
+  m_Layer: 5
+  m_Name: Logros
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7987059517377314886
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382086698090439748}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.37067, y: 0.39018, z: 0.39018}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1565930947749585773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 54.787415, y: 755}
+  m_SizeDelta: {x: 871.666, y: 833}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2319324972846745219
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382086698090439748}
+  m_CullTransparentMesh: 1
+--- !u!114 &1648043997409151589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382086698090439748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 2100000, guid: 0aea4e2d74c661846ac153da6c38a2a4, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: c8637be682fb43f47b0d2a54836429b7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8077007538519234064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7382086698090439748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03f2dcf0e876db4ab69cfc7f7e745d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imageUI: {fileID: 1648043997409151589}
+  logrosImagenes:
+  - {fileID: 21300000, guid: c8637be682fb43f47b0d2a54836429b7, type: 3}
+  - {fileID: 21300000, guid: a7a00ddd85d0f1649845961e84759744, type: 3}
+  - {fileID: 21300000, guid: 76a2a776f1fadaa4bb99e245fd9ccf1c, type: 3}
+  - {fileID: 21300000, guid: 21289cde2dd7eb8488509607b2579ccb, type: 3}
+  - {fileID: 21300000, guid: adc888a9442d4c24a9eb589406d8f3d8, type: 3}
+  - {fileID: 21300000, guid: 8c07d1ac37031b04ea75bbdefce18c4d, type: 3}
+  - {fileID: 21300000, guid: f985f56cfc8220d49b75b793fd6ba42d, type: 3}
+  - {fileID: 21300000, guid: 4f69325118646e143b8827bc4839f914, type: 3}
+  - {fileID: 21300000, guid: c8100050ea19a304384ffc09dace0736, type: 3}
+  - {fileID: 21300000, guid: 5ac1be5fe6b1e784d8281db250c80310, type: 3}
+  posicionImagen: {fileID: 7987059517377314886}
+  finPosicionY: 856
+  duration: 3
+  fragmentosRecogidos: 0
+  contadorDeSaltos: 0
 --- !u!1 &7573982658008265835
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,6 +869,7 @@ RectTransform:
   - {fileID: 777599514263268927}
   - {fileID: 5932252401585350234}
   - {fileID: 3870040184295881583}
+  - {fileID: 7987059517377314886}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

@@ -47,6 +47,7 @@ public class Nave : MonoBehaviour
 
             if(Input.GetKey(KeyCode.E))
             {
+                LogrosManager.Instance.CapitanMando();
                 Animacion();
             }
         }
