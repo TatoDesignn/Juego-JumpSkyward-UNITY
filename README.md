@@ -48,6 +48,22 @@
   <li><strong>Maestro:</strong> Presiona las teclas ocultas.</li>
 </ul>
 <img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/TodosLogros.png">
+<h2>Modo de juego 🗺️</h2>
+<ul>
+  <strong>Facil:</strong>
+  <li>Personaje principal con 5 vidas</li>
+  <li>Todos los personajes restan 1 de daño</li>
+  <li>Espada hace 2 de daño</li>
+  <li>Martillo hace 3 de daño</li>
+  <li>Plataforma de caida y aplastar con mas duracion</li>
+  <strong><br>Medio:</strong>
+  <li>Personaje principal con 3 vidas.</li>
+  <li>Espada hace 1 de daño</li>
+  <li>Martillo hace 2 de daño</li>
+  <strong><br>Dificil:</strong>
+  <li>Personaje principal con 1 vidas</li>
+  <li>Velocidad de ataque de enemigos aumentada</li>
+</ul>
 <h2>Instrucciones 🕹️</h2>
 <ol>
   <li><strong>Controles: </strong></li>
