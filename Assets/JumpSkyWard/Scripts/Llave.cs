@@ -15,6 +15,7 @@ public class Llave : MonoBehaviour
     {
         if (collision.CompareTag("Personaje"))
         {
+            SoundManager.Instance.llave();
             puerta.llave = true;
             gameObject.SetActive(false);
         }

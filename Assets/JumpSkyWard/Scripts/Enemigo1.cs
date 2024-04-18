@@ -89,11 +89,13 @@ public class Enemigo1 : MonoBehaviour
             {
                 Girar(4);
                 animator.SetTrigger("Hit");
+                SoundManager.Instance.HitCiber();
             }
             else if (vida <= 0)
             {
                 velocidad = 0;
                 animator.SetTrigger("Muerte");
+                SoundManager.Instance.MuerteCiber();
             }
         }
 
@@ -103,11 +105,13 @@ public class Enemigo1 : MonoBehaviour
             {
                 velocidad += 4;
                 animator.SetTrigger("Hit");
+                SoundManager.Instance.HitCiber();
             }
             else if (vida <= 0)
             {
                 velocidad = 0;
                 animator.SetTrigger("Muerte");
+                SoundManager.Instance.MuerteCiber();
             }
         }
        

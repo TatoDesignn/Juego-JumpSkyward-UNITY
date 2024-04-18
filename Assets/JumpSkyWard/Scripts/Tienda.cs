@@ -37,6 +37,7 @@ public class Tienda : MonoBehaviour
 
     public void Pausar()
     {
+        SoundManager.Instance.Tienda();
         tienda.SetActive(true);
         Time.timeScale = 0;
     }
@@ -48,6 +49,7 @@ public class Tienda : MonoBehaviour
     }
     public void PausarYReanudar()
     {
+        SoundManager.Instance.Tienda();
         tienda.SetActive(!tienda.activeSelf);
         Time.timeScale = tienda.activeSelf ? 0 : 1;
     }

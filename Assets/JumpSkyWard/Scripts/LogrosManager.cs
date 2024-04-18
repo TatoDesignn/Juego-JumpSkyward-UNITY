@@ -153,6 +153,7 @@ public class LogrosManager : MonoBehaviour
 
     private void Mostrar()
     {
+        SoundManager.Instance.Logros();
         posicionImagen.DOMoveY(finPosicionY, duration).SetEase(Ease.OutBounce);
         Invoke("Apagar", 4f);
     }

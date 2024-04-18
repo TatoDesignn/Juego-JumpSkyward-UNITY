@@ -52,10 +52,12 @@ public class Enemigo2 : MonoBehaviour
 
         if (vida >= 1)
         {
+            SoundManager.Instance.HitCanon();
             animator.SetTrigger("Hit");
         }
         else if (vida <= 0)
         {
+            SoundManager.Instance.MuerteCanon();
             muerte = true;
             animator.SetTrigger("Dead");
             Invoke("Destruir", 1f);
@@ -65,6 +67,7 @@ public class Enemigo2 : MonoBehaviour
     private void Disparar()
     {
         Instantiate(bala, controladorDisparo.position, controladorDisparo.rotation);
+        SoundManager.Instance.DisparoCañon();
     }
 
     public void Destruir()

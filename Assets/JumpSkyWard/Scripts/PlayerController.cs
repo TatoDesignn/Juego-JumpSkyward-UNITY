@@ -123,6 +123,7 @@ public class PlayerController : MonoBehaviour
             canJump = false;
             animator.SetTrigger("Jump");
             LogrosManager.Instance.contadorDeSaltos += 1;
+            SoundManager.Instance.Salto();
         }
 
         animator.ResetTrigger("Parado");
@@ -145,6 +146,7 @@ public class PlayerController : MonoBehaviour
         {
             escudo.SetActive(true); 
             tieneEscudo = false;
+            SoundManager.Instance.Escudo();
             Escudo();
         }
     }
@@ -159,6 +161,16 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0) && tiempoSiguienteAtaque <= 0 && (arma || arma2))
         {
             tiempoSiguienteAtaque = tiempoEntreAtaque;
+
+            if (arma)
+            {
+                SoundManager.Instance.AtaqueEspada();
+            }
+            else if (arma2)
+            {
+                SoundManager.Instance.AtaqueMartillo();
+            }
+
             Daño();
         }
     }
@@ -237,6 +249,7 @@ public class PlayerController : MonoBehaviour
                 Inmovil();
                 animator.SetTrigger("Hit");
                 animatorHud.SetTrigger("V2");
+                SoundManager.Instance.HitPlayer();
                 Invoke("Restablecer", 0.8f);
             }
             else if (salud == 1)
@@ -244,10 +257,12 @@ public class PlayerController : MonoBehaviour
                 Inmovil();
                 animator.SetTrigger("Hit");
                 animatorHud.SetTrigger("V1");
+                SoundManager.Instance.HitPlayer();
                 Invoke("Restablecer", 0.8f);
             }
             else if (salud == 0)
             {
+                SoundManager.Instance.MuertePlayer();
                 Muerte();
                 animatorHud.SetTrigger("V0");
             }
@@ -255,6 +270,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             escudo.SetActive(false);
+            SoundManager.Instance.EscudoRomper();
         }
 
         GameManager.Instance.vida = salud;
@@ -378,6 +394,7 @@ public class PlayerController : MonoBehaviour
         if (collision.collider.tag == "Laser")
         {
             LogrosManager.Instance.TemperaturasAltas();
+            SoundManager.Instance.Laser();
             Muerte();
         }
     }
@@ -418,6 +435,7 @@ public class PlayerController : MonoBehaviour
             LogrosManager.Instance.fragmentosRecogidos += 1;
             GameManager.Instance.puntaje = fragmentos;
             Destroy(collision.gameObject);
+            SoundManager.Instance.Fragmentos();
             Puntos();
         }
 
@@ -425,6 +443,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(collision.gameObject);
             escudo.SetActive(true);
+            SoundManager.Instance.Escudo();
         }
     }
 

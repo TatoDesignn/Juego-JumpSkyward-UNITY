@@ -37,6 +37,7 @@ public class Puerta : MonoBehaviour
                 if (Input.GetKey(KeyCode.E))
                 {
                     panel.SetActive(true);
+                    SoundManager.Instance.Puerta();
 
                     if (player.invencible)
                     {
