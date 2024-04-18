@@ -19,6 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void Jugar()
     {
+        SoundManager.Instance.MouseHover();
         panel.SetActive(true);
         trans.Transicion();
         Invoke("Jugar2", 1);
@@ -26,6 +27,7 @@ public class MainMenu : MonoBehaviour
 
     private void Jugar2()
     {
+        SoundManager.Instance.Niveles();
         SceneManager.LoadScene(1);
     }
 
