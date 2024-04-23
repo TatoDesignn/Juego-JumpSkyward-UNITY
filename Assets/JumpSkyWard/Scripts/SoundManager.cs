@@ -56,6 +56,9 @@ public class SoundManager : MonoBehaviour
     public void HitCiber() { audioSource.PlayOneShot(audios[4]); audioSource.volume = 0.1f; }
     public void MuerteCiber() { audioSource.PlayOneShot(audios[10]); audioSource.volume = 0.5f; }
     public void HitCanon() { audioSource.PlayOneShot(audios[17]); audioSource.volume = 0.5f; }
+    public void HitSnake() { audioSource.PlayOneShot(audios[29]); audioSource.volume = 0.5f; }
+    public void MuerteSnake() { audioSource.PlayOneShot(audios[27]); audioSource.volume = 0.5f; }
+    public void AtaqueSnake() { audioSource.PlayOneShot(audios[28]); audioSource.volume = 0.5f; }
     public void MuerteCanon() { audioSource.PlayOneShot(audios[19]); audioSource.volume = 0.5f; }
     public void DisparoCañon() { audioSource.PlayOneShot(audios[0]); audioSource.volume = 0.5f; }
     public void Escudo() { audioSource.PlayOneShot(audios[1]); audioSource.volume = 0.3f; }

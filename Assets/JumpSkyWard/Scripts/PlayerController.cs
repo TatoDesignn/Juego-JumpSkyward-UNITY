@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
     bool mover = true;
     float velocidadF;
     string escena;
-    int saltos = 0;
 
     void Start()
     {
@@ -219,6 +218,17 @@ public class PlayerController : MonoBehaviour
                 else if (arma2)
                 {
                     collisionador.transform.GetComponent<Enemigo2>().Daño(2);
+                }
+            }
+            if (collisionador.CompareTag("Enemigo3"))
+            {
+                if (arma)
+                {
+                    collisionador.transform.GetComponent<Enemigo3>().Daño(1);
+                }
+                else if (arma2)
+                {
+                    collisionador.transform.GetComponent<Enemigo3>().Daño(2);
                 }
             }
         }
@@ -444,6 +454,11 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             escudo.SetActive(true);
             SoundManager.Instance.Escudo();
+        }
+
+        if (collision.CompareTag("Acha"))
+        {
+            Vida(1);
         }
     }
 
