@@ -68,7 +68,7 @@ public class SoundManager : MonoBehaviour
     public void MouseHover() { audioSource.PlayOneShot(audios[6]); audioSource.volume = 1f; }
     public void Logros() { audioSource.PlayOneShot(audios[21]); audioSource.volume = 0.4f; }
     public void llave() { audioSource.PlayOneShot(audios[14]); audioSource.volume = 0.4f; }
-    public void Tienda() { audioSource.PlayOneShot(audios[20]); audioSource.volume = 0.2f; }
+    public void Tienda() { audioSource.PlayOneShot(audios[20]); audioSource.volume = 0.1f; }
     public void Menu() { audioMusic.clip = audios[25]; audioMusic.Play(); audioMusic.loop = true; }
     public void Niveles() { audioMusic.Stop();  audioMusic.clip = audios[24]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
 }

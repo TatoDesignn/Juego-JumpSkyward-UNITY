@@ -64,7 +64,7 @@ public class LogrosManager : MonoBehaviour
             ColeccionistaFragmentos();
         }
 
-        if(fragmentosRecogidos == 60 && !astronautaAhorrativo)
+        if(fragmentosRecogidos == 88 && !astronautaAhorrativo)
         {
             astronautaAhorrativo = true;
             AstronautaAhorrativo();
@@ -76,7 +76,7 @@ public class LogrosManager : MonoBehaviour
             Maestro();
         }
 
-        if(contadorDeSaltos == 25 && !reySaltarin)
+        if(contadorDeSaltos == 35 && !reySaltarin)
         {
             reySaltarin = true;
             ReySaltarin();
