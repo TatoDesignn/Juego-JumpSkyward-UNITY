@@ -8,7 +8,7 @@ public class Llave : MonoBehaviour
     
     void Start()
     {
-        //puerta = GameObject.FindGameObjectWithTag("Puerta").GetComponent<Puerta>();
+        puerta = GameObject.FindGameObjectWithTag("Puerta").GetComponent<Puerta>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

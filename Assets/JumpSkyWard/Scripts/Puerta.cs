@@ -16,6 +16,7 @@ public class Puerta : MonoBehaviour
     {
         letrero.SetActive(false);
         letrero2.SetActive(false);
+        llave = false;
 
         player = GameObject.FindGameObjectWithTag("Personaje").GetComponent<PlayerController>();
     }
