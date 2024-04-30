@@ -34,6 +34,12 @@
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/DiseñoPapelNivel2.jpg">
 <strong>Nivel digital: </strong>
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/NivelDigital2.png">
+<h2>Nivel 3 🏛️</h2>
+<p>Este nivel te llevara a una de las cuevas de Zephyria donde tendras nuevos obstaculos como las zonas de lava o las hachas giratorias, ademas ten cuidado donde pisas, temibles serpientes saldran de la tierra a atacarte, por su puesto este es un reto mayor para los jugadores, apoyate de las lianas para superar diferentes retos y recuerta esquivar los disparos de los cañones. </p>
+<strong>Prototipo de nivel en papel: </strong>
+<img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/DiseñoPapelNivel3.jpg">
+<strong>Nivel digital: </strong>
+<img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/NivelDigital3.png">
 <h2>Logros 🏆</h2>
 <ul>
   <li><strong>Primeros Pasos:</strong> Completa el tutorial del juego.</li>
@@ -44,7 +50,7 @@
   <li><strong>Capitan al mando:</strong> Maneja un cohete.</li>
   <li><strong>Astronauta ahorrativo:</strong> Consigue todos los fragmentos de los niveles sin gastar ninguno.</li>
   <li><strong>El primer fierro:</strong> Consigue tu primer arma.</li>
-  <li><strong>Rey saltarin:</strong> Salta 25 veces.</li>
+  <li><strong>Rey saltarin:</strong> Salta 35 veces.</li>
   <li><strong>Maestro:</strong> Presiona las teclas ocultas.</li>
 </ul>
 <img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/TodosLogros.png">
