@@ -99,6 +99,6 @@
 </ul>
 <h2>Creditos ⭐</h2>
 <ul>
-  <li>Santiago Piedrahita (Diseñador UI/UX)</li>
-  <li>Jose Santiago Restrepo C (Programador C#)</li>
+  <li>Santiago Piedrahita (Diseñador UI/UX).</li>
+  <li>Jose Santiago Restrepo C (Programador C#).</li>
 </ul>
