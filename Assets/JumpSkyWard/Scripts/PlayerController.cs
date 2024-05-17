@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float radioGolpe;
     [SerializeField] private Vector2 size;
     [SerializeField] private float angulo;
+    [SerializeField] private float ataqueEspada;
+    [SerializeField] private float ataqueMartillo;
 
     [Space]
     [Header("Control Hud: ")]
@@ -74,6 +76,8 @@ public class PlayerController : MonoBehaviour
         fragmentos = GameManager.Instance.puntaje;
         salud = GameManager.Instance.vida;
         tieneEscudo = GameManager.Instance.escudo;
+        ataqueEspada = ModoJuego.Instance.espada;
+        ataqueMartillo = ModoJuego.Instance.martillo;
         Escudo();
         Puntos();
         VidaActual();
@@ -202,33 +206,33 @@ public class PlayerController : MonoBehaviour
             {
                 if(arma)
                 {
-                    collisionador.transform.GetComponent<Enemigo1>().Daño(1);
+                    collisionador.transform.GetComponent<Enemigo1>().Daño(ataqueEspada);
                 }
                 else if (arma2)
                 {
-                    collisionador.transform.GetComponent<Enemigo1>().Daño(2);
+                    collisionador.transform.GetComponent<Enemigo1>().Daño(ataqueMartillo);
                 }
             }
             if (collisionador.CompareTag("Enemigo2"))
             {
                 if (arma)
                 {
-                    collisionador.transform.GetComponent<Enemigo2>().Daño(1);
+                    collisionador.transform.GetComponent<Enemigo2>().Daño(ataqueEspada);
                 }
                 else if (arma2)
                 {
-                    collisionador.transform.GetComponent<Enemigo2>().Daño(2);
+                    collisionador.transform.GetComponent<Enemigo2>().Daño(ataqueMartillo);
                 }
             }
             if (collisionador.CompareTag("Enemigo3"))
             {
                 if (arma)
                 {
-                    collisionador.transform.GetComponent<Enemigo3>().Daño(1);
+                    collisionador.transform.GetComponent<Enemigo3>().Daño(ataqueEspada);
                 }
                 else if (arma2)
                 {
-                    collisionador.transform.GetComponent<Enemigo3>().Daño(2);
+                    collisionador.transform.GetComponent<Enemigo3>().Daño(ataqueMartillo);
                 }
             }
         }

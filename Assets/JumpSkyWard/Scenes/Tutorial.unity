@@ -9207,6 +9207,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8231571726385017533, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
+      propertyPath: salud
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8231571726385017533, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
       propertyPath: texto
       value: 
       objectReference: {fileID: 1536898998}
@@ -9894,6 +9898,8 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 829360924}
+  - {fileID: 4830875009811672194}
   - {fileID: 1536898996}
   - {fileID: 600821754}
   - {fileID: 293943206}
@@ -9905,5 +9911,3 @@ SceneRoots:
   - {fileID: 1001353550}
   - {fileID: 203791376}
   - {fileID: 1663372511}
-  - {fileID: 829360924}
-  - {fileID: 4830875009811672194}

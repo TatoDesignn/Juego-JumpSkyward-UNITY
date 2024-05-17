@@ -18,7 +18,9 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if(GameManager.Instance == null)
+        vida = ModoJuego.Instance.vidaPersonaje;
+
+        if (GameManager.Instance == null)
         {
             GameManager.Instance = this;
             DontDestroyOnLoad(this.gameObject);

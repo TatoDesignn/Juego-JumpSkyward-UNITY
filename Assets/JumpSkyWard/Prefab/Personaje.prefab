@@ -564,6 +564,7 @@ MonoBehaviour:
   martillo: {fileID: 5756302269471188772}
   mira: {fileID: 3006173809490596177}
   escudo: {fileID: 4948662374172761238}
+  activarEscudo: {fileID: 0}
   "da\xF1o": 0
   tiempoEntreAtaque: 0.5
   tiempoSiguienteAtaque: 0
@@ -571,9 +572,14 @@ MonoBehaviour:
   radioGolpe: 1
   size: {x: 2, y: 2}
   angulo: 2
+  ataqueEspada: 0
+  ataqueMartillo: 0
   texto: {fileID: 0}
+  fragmentos: 0
+  salud: 0
+  tieneEscudo: 0
   canMove: 1
-  salud: 3
+  invencible: 1
 --- !u!50 &4050188738457764635
 Rigidbody2D:
   serializedVersion: 4
