@@ -34,6 +34,7 @@ public class MainMenu : MonoBehaviour
         ModoJuego.Instance.martillo = 3;
         panel.SetActive(true);
         trans.Transicion();
+        SoundManager.Instance.MouseHover();
         Invoke("Jugar2", 1);
     }
 
@@ -45,6 +46,7 @@ public class MainMenu : MonoBehaviour
         ModoJuego.Instance.martillo = 2;
         panel.SetActive(true);
         trans.Transicion();
+        SoundManager.Instance.MouseHover();
         Invoke("Jugar2", 1);
     }
 
@@ -56,6 +58,7 @@ public class MainMenu : MonoBehaviour
         ModoJuego.Instance.martillo = 2;
         panel.SetActive(true);
         trans.Transicion();
+        SoundManager.Instance.MouseHover();
         Invoke("Jugar2", 1);
     }
 
