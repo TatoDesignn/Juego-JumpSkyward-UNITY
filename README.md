@@ -81,7 +81,8 @@
     <li><strong>Escalera:</strong> W y S</li>
     <li><strong>Ataque:</strong> CLICK IZQUIERDO</li>
     <li><strong>Escudo:</strong> C</li>
-    <li><Strong>Tienda:</Strong> ESCAPE</li>
+    <li><Strong>Tienda:</Strong> F</li>
+    <li><Strong>Logros:</Strong> Q</li>
   </ul>
   <br>
   <li><strong>Fragmentos: </strong></li>
