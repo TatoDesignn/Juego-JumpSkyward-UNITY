@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
         tieneEscudo = GameManager.Instance.escudo;
         ataqueEspada = ModoJuego.Instance.espada;
         ataqueMartillo = ModoJuego.Instance.martillo;
+        LogrosManager.Instance.ActualizarLogros();
         Escudo();
         Puntos();
         VidaActual();

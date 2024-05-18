@@ -20,13 +20,13 @@ public class HudManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             AnalizarTienda();
         }
         else if (Input.GetKeyDown(KeyCode.Q))
         {
-
+            AnalizarLogros();
         }
     }
 
@@ -81,10 +81,17 @@ public class HudManager : MonoBehaviour
         Time.timeScale = 1;
         SoundManager.Instance.Tienda();
     }
-    public void PausarYReanudar()
+    public void PausarYReanudarTienda()
     {
         SoundManager.Instance.Tienda();
         tienda.SetActive(!tienda.activeSelf);
         Time.timeScale = tienda.activeSelf ? 0 : 1;
+    }
+
+    public void PausarYReanudarLogros()
+    {
+        SoundManager.Instance.Tienda();
+        logros.SetActive(!logros.activeSelf);
+        Time.timeScale = logros.activeSelf ? 0 : 1;
     }
 }
