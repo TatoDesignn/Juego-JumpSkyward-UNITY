@@ -50898,6 +50898,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6881775386773235388, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
+      propertyPath: tienda
+      value: 
+      objectReference: {fileID: 216431260}
     - target: {fileID: 7573982658008265835, guid: fcda06d66a1db3b4b98555f309fe27a9, type: 3}
       propertyPath: m_Name
       value: HUD
