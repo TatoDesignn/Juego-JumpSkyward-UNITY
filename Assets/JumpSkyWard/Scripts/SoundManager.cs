@@ -34,15 +34,7 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            Menu();
-        }
-
-        else if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            Niveles();
-        }
+        Menu();
     }
 
     public void Correr() { }
@@ -71,4 +63,6 @@ public class SoundManager : MonoBehaviour
     public void Tienda() { audioSource.PlayOneShot(audios[20]); audioSource.volume = 0.1f; }
     public void Menu() { audioMusic.clip = audios[25]; audioMusic.Play(); audioMusic.loop = true; }
     public void Niveles() { audioMusic.Stop();  audioMusic.clip = audios[24]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Jefe() { audioMusic.Stop();  audioMusic.clip = audios[30]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Jefe2() { audioMusic.Stop();  audioMusic.clip = audios[31]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
 }

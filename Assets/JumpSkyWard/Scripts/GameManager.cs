@@ -15,10 +15,13 @@ public class GameManager : MonoBehaviour
     public bool escudo;
     public int puntaje;
     public int vida;
+    public int saludMaxima;
+    public bool murio = false;
 
     private void Awake()
     {
-        vida = ModoJuego.Instance.vidaPersonaje;
+        saludMaxima = ModoJuego.Instance.vidaPersonaje;
+        vida = saludMaxima;
 
         if (GameManager.Instance == null)
         {

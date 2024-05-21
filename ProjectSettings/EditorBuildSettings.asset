@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/JumpSkyWard/Scenes/Nivel3.unity
     guid: f54cc8c9e941d5a4786e23e8b0033f29
+  - enabled: 1
+    path: Assets/JumpSkyWard/Scenes/Nivel4.unity
+    guid: e0e65d88e9cdeff42994deee3a9fc6da
   m_configObjects: {}

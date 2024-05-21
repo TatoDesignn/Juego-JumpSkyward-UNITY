@@ -74,7 +74,17 @@ public class PlayerController : MonoBehaviour
         escena = SceneManager.GetActiveScene().name;
         GameManager.Instance.ActivaArma();
         fragmentos = GameManager.Instance.puntaje;
-        salud = GameManager.Instance.vida;
+
+        if (GameManager.Instance.murio)
+        {
+            salud = GameManager.Instance.saludMaxima;
+            GameManager.Instance.murio = false;
+        }
+        else
+        {
+            salud = GameManager.Instance.vida;
+        }
+
         tieneEscudo = GameManager.Instance.escudo;
         ataqueEspada = ModoJuego.Instance.espada;
         ataqueMartillo = ModoJuego.Instance.martillo;
@@ -236,6 +246,17 @@ public class PlayerController : MonoBehaviour
                     collisionador.transform.GetComponent<Enemigo3>().Daño(ataqueMartillo);
                 }
             }
+            if (collisionador.CompareTag("Enemigo4"))
+            {
+                if (arma)
+                {
+                    collisionador.transform.GetComponent<Jefefinal>().Daño(ataqueEspada);
+                }
+                else if (arma2)
+                {
+                    collisionador.transform.GetComponent<Jefefinal>().Daño(ataqueMartillo);
+                }
+            }
         }
     }
 
@@ -277,6 +298,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (salud == 0)
             {
+                GameManager.Instance.murio = true;
                 SoundManager.Instance.MuertePlayer();
                 Muerte();
                 animatorHud.SetTrigger("V0");
