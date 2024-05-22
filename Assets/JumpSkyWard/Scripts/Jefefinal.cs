@@ -6,6 +6,8 @@ using UnityEngine.Video;
 public class Jefefinal : MonoBehaviour
 {
     Animator animator;
+    Animator animatorPuerta;
+
     BoxCollider2D boxCollider;
     [Space]
     [Header("Configuracion de jefe:")]
@@ -13,6 +15,7 @@ public class Jefefinal : MonoBehaviour
     [SerializeField] private float vidaGigante;
     [SerializeField] private BarraVidaJefe barraVida;
     [SerializeField] private GameObject canvas;
+    [SerializeField] private GameObject puerta;
 
     public bool transformacion = false;
     public bool enojado = false;
@@ -23,6 +26,7 @@ public class Jefefinal : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        animatorPuerta = puerta.GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         canvas.SetActive(false);
 
@@ -63,6 +67,7 @@ public class Jefefinal : MonoBehaviour
             {
                 muerto = true;
                 canvas.SetActive(false);
+                animatorPuerta.SetTrigger("Mover");
                 animator.SetTrigger("Muerte");
                 Invoke("Muerte", 2);
             }
@@ -81,6 +86,7 @@ public class Jefefinal : MonoBehaviour
 
     public void Muerte()
     {
+        puerta.SetActive(false);
         Destroy(gameObject);
     }
 

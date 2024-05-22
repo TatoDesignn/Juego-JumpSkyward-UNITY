@@ -64,7 +64,7 @@ public class MainMenu : MonoBehaviour
 
     private void Jugar2()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
     }
 
     public void Salir()
