@@ -7,7 +7,11 @@ public class Musica : MonoBehaviour
 {
     void Start()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            SoundManager.Instance.Menu();
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             SoundManager.Instance.Niveles();
         }

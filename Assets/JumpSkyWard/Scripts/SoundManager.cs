@@ -32,11 +32,6 @@ public class SoundManager : MonoBehaviour
         audioMusic = transform.GetChild(1).GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
-        Menu();
-    }
-
     public void Correr() { }
     public void AtaqueEspada() { audioSource.PlayOneShot(audios[12]); audioSource.volume = 0.1f; }
     public void AtaqueMartillo() { audioSource.PlayOneShot(audios[13]); audioSource.volume = 0.1f; }
