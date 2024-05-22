@@ -57,7 +57,11 @@ public class SoundManager : MonoBehaviour
     public void llave() { audioSource.PlayOneShot(audios[14]); audioSource.volume = 0.4f; }
     public void Tienda() { audioSource.PlayOneShot(audios[20]); audioSource.volume = 0.1f; }
     public void Menu() { audioMusic.clip = audios[25]; audioMusic.Play(); audioMusic.loop = true; }
-    public void Niveles() { audioMusic.Stop();  audioMusic.clip = audios[24]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Tutorial() { audioMusic.Stop();  audioMusic.clip = audios[32]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Nivel1() { audioMusic.Stop();  audioMusic.clip = audios[24]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Nivel2() { audioMusic.Stop();  audioMusic.clip = audios[33]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Nivel3() { audioMusic.Stop();  audioMusic.clip = audios[34]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
     public void Jefe() { audioMusic.Stop();  audioMusic.clip = audios[30]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
     public void Jefe2() { audioMusic.Stop();  audioMusic.clip = audios[31]; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
+    public void Creditos() { audioMusic.Stop();  audioMusic.clip = audios[35]; audioMusic.volume = 0.15f; audioMusic.Play(); audioAmbiente.clip = audios[22];  audioAmbiente.Play(); audioMusic.loop = true; audioAmbiente.loop = true; }
 }

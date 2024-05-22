@@ -13,19 +13,19 @@ public class Musica : MonoBehaviour
         }
         else if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            SoundManager.Instance.Niveles();
+            SoundManager.Instance.Tutorial();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
-            SoundManager.Instance.Niveles();
+            SoundManager.Instance.Nivel1();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 3)
         {
-            SoundManager.Instance.Niveles();
+            SoundManager.Instance.Nivel2();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 4)
         {
-            SoundManager.Instance.Niveles();
+            SoundManager.Instance.Nivel3();
         }
         else if (SceneManager.GetActiveScene().buildIndex == 5)
         {

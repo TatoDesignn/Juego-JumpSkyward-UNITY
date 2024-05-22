@@ -23,6 +23,7 @@ public class Creditos : MonoBehaviour
     {
         if (collision.CompareTag("Personaje"))
         {
+            SoundManager.Instance.Creditos();
             box.enabled = false;
             animator.SetTrigger("Mover");
         }
