@@ -5,6 +5,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using UnityEngine.Video;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,11 +13,30 @@ public class MainMenu : MonoBehaviour
 
     public GameObject panel;
     public GameObject[] botones;
+    [SerializeField] private VideoPlayer video;
 
     private void Start()
     {
         trans = panel.GetComponent<Transition>();
+        botones[3].SetActive(true);
 
+        if(video != null)
+        {
+            video.loopPointReached += OnVideoEnd;
+        }
+    }
+
+    void OnVideoEnd(VideoPlayer video)
+    {
+        Primera();
+    }
+
+    private void Primera()
+    {
+        SoundManager.Instance.Menu();
+        botones[3].SetActive(false);
+        botones[2].SetActive(true);
+        botones[0].SetActive(true);
     }
 
     public void Jugar()
@@ -64,7 +84,7 @@ public class MainMenu : MonoBehaviour
 
     private void Jugar2()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(1);
     }
 
     public void Salir()
