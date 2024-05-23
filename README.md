@@ -1,5 +1,5 @@
 <h1>Jump Skyward 🪐</h1>
-<img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/LogoPositivo.png">
+<img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/LogoPositivoconNegativo.png">
 <h2>Historia 🗺️</h2>
 <p>En una era de exploración intergaláctica, la humanidad ha alcanzado las estrellas, buscando nuevos mundos y civilizaciones. Eres el astronauta Alex Skyward, parte de la iniciativa "Leap Beyond", un proyecto destinado a explorar los confines más remotos del universo. Durante una misión rutinaria en la nave "Odyssey", una tormenta de materia oscura, golpea la nave, causando que se desvíe de su curso y se estrelle en el planeta desconocido de Zephyria. Este mundo está compuesto de plataformas flotantes.</p>
 <img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/Portada.jpg">
