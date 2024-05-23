@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -12,6 +8,7 @@ public class MainMenu : MonoBehaviour
     Transition trans;
 
     public GameObject panel;
+    public GameObject fondo;
     public GameObject[] botones;
     [SerializeField] private VideoPlayer video;
 
@@ -19,6 +16,7 @@ public class MainMenu : MonoBehaviour
     {
         trans = panel.GetComponent<Transition>();
         botones[3].SetActive(true);
+
 
         if(video != null)
         {
@@ -34,6 +32,7 @@ public class MainMenu : MonoBehaviour
     private void Primera()
     {
         SoundManager.Instance.Menu();
+        fondo.SetActive(true);
         botones[3].SetActive(false);
         botones[2].SetActive(true);
         botones[0].SetActive(true);
