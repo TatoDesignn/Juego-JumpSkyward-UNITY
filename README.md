@@ -40,6 +40,9 @@
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/DiseñoPapelNivel3.jpg">
 <strong>Nivel digital: </strong>
 <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/NivelDigital3.png">
+<h2>Jefe final 😈</h2>
+<p>Xal'tharn es un ser complejo. Es el guardián de los secretos de Zephyria y posee un vasto conocimiento de las artes arcanas. Su misión es proteger el equilibrio de su mundo, manteniendo a raya tanto las fuerzas oscuras como las luminosas que amenazan con desestabilizarlo</p>
+<img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/Pagina1.gif">
 <h2>Logros 🏆</h2>
 <ul>
   <li><strong>Primeros Pasos:</strong> Completa el tutorial del juego.</li>
@@ -103,7 +106,6 @@
   <li><a href="https://drive.google.com/file/d/1gt9am-qWWtWTV0YA9fICrAT7ASXQPWSx/view?usp=sharing">¡Descargar para PC!</li>
 </ul>
 <h2>Creditos ⭐</h2>
-<ul>
-  <li>Santiago Piedrahita (Diseñador UI/UX).</li>
-  <li>Jose Santiago Restrepo C (Programador C#).</li>
-</ul>
+<p align="center">
+  <img style="width: 500px; height: auto;" src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/JumpSkyward/Creditos.png">
+</p>
