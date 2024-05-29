@@ -60,7 +60,7 @@ public class Enemigo2 : MonoBehaviour
             SoundManager.Instance.MuerteCanon();
             muerte = true;
             animator.SetTrigger("Dead");
-            Invoke("Destruir", 1f);
+            //Invoke("Destruir", 1f);
         }
     }
 

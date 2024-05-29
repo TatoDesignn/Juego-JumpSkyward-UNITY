@@ -124,7 +124,7 @@ MonoBehaviour:
   bala: {fileID: 7519410725473342451, guid: fa674c76264e7534d9be469c440c07e6, type: 3}
   controladorDisparo: {fileID: 7108327330541031992}
   cinemachine: {fileID: 0}
-  personaje: {fileID: 0}
+  personaje: {fileID: 1693388097269534056, guid: 53e8b02a3901d724a9c2756581c768d4, type: 3}
   punto: {fileID: 0}
   distanciaLinea: 9.5
   capaJugador:

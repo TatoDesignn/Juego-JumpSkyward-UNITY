@@ -49944,6 +49944,10 @@ PrefabInstance:
       value: Enemigo2 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3527496027363313129, guid: df6786f16fb6b934dafcdab02935e120, type: 3}
+      propertyPath: punto
+      value: 
+      objectReference: {fileID: 1953126704}
+    - target: {fileID: 3527496027363313129, guid: df6786f16fb6b934dafcdab02935e120, type: 3}
       propertyPath: personaje
       value: 
       objectReference: {fileID: 1161887742}
@@ -52202,6 +52206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo2
       objectReference: {fileID: 0}
+    - target: {fileID: 3527496027363313129, guid: df6786f16fb6b934dafcdab02935e120, type: 3}
+      propertyPath: punto
+      value: 
+      objectReference: {fileID: 1953126704}
     - target: {fileID: 3527496027363313129, guid: df6786f16fb6b934dafcdab02935e120, type: 3}
       propertyPath: personaje
       value: 
@@ -55762,6 +55770,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15507a4a9ce1af54c802bef00de4bca8, type: 3}
+--- !u!1 &1953126704 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8804666151711449877, guid: 15507a4a9ce1af54c802bef00de4bca8, type: 3}
+  m_PrefabInstance: {fileID: 1953126703}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1956662382 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8125553899690513664, guid: 6cfe70ccd5b49804fa9b18d520a8a123, type: 3}
@@ -56269,6 +56282,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3527496027363313129, guid: df6786f16fb6b934dafcdab02935e120, type: 3}
+      propertyPath: punto
+      value: 
+      objectReference: {fileID: 1953126704}
     - target: {fileID: 3527496027363313129, guid: df6786f16fb6b934dafcdab02935e120, type: 3}
       propertyPath: personaje
       value: 
