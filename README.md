@@ -96,7 +96,11 @@
   <li><a href="https://www.youtube.com/watch?v=q_EAfGq9DEc">Link video del juego v0.1</li>
   <li><a href="https://www.youtube.com/watch?v=zbQpEwd0dSs">Link video del juego v0.2</li>
   <li><a href="https://youtu.be/maXahsVbuMc">Link video del juego v0.3</li>
+  <li><a href="https://www.youtube.com/watch?v=qfk0CRiZZ78&t=9s">Link video del juego v0.4 - Definitiva</li>
   <li><a href="https://www.canva.com/design/DAF9jJxA8sE/wHQfCNZ8P3p0dWzCN2eqYQ/edit?utm_content=DAF9jJxA8sE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Link presentación Canva</li>
+  <li><a href="https://tatodesign.github.io/Pagina-JumpSkyward-HTML/">¡Sitio web!</li>
+  <li><a href="https://tato420.itch.io/jumpskyward">¡Jugar en linea!</li>
+  <li><a href="https://drive.google.com/file/d/1gt9am-qWWtWTV0YA9fICrAT7ASXQPWSx/view?usp=sharing">¡Descargar para PC!</li>
 </ul>
 <h2>Creditos ⭐</h2>
 <ul>
