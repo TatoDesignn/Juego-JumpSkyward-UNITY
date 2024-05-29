@@ -108,15 +108,7 @@ public class AtaqueBoss2 : MonoBehaviour
             esperarAtaque = true;
             jefe.ActivarBox();
         }  
-
-        //Invoke("ReanudarAtaque", 1f);
     }
-
-    /*private void ReanudarAtaque()
-    {
-        esperarAtaque = true;
-        jefe.ActivarDesactivarBox();
-    }*/
 
     private void OnDrawGizmos()
     {

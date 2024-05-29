@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class VocesBoss : MonoBehaviour
 {
-    AudioSource audio;
+    AudioSource audioS;
     Jefefinal jefe;
     
 
@@ -19,7 +19,7 @@ public class VocesBoss : MonoBehaviour
 
     void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audioS = GetComponent<AudioSource>();
         jefe = GetComponentInParent<Jefefinal>();
     }
 
@@ -46,23 +46,23 @@ public class VocesBoss : MonoBehaviour
 
         if (numero == 0)
         {
-            audio.PlayOneShot(voces[0]);
-            audio.volume = 0.3f;
+            audioS.PlayOneShot(voces[0]);
+            audioS.volume = 0.3f;
         }
         else if (numero == 1)
         {
-            audio.PlayOneShot(voces[1]);
-            audio.volume = 0.4f;
+            audioS.PlayOneShot(voces[1]);
+            audioS.volume = 0.4f;
         }
         else if(numero == 2)
         {
-            audio.PlayOneShot(voces[2]);
-            audio.volume = 0.4f;
+            audioS.PlayOneShot(voces[2]);
+            audioS.volume = 0.4f;
         }
         else if (numero == 3)
         {
-            audio.PlayOneShot(voces[3]);
-            audio.volume = 0.4f;
+            audioS.PlayOneShot(voces[3]);
+            audioS.volume = 0.4f;
         }
 
         Invoke("Restart", 7f); 

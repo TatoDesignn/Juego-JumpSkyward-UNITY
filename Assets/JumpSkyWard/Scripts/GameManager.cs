@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager Instance;
     PlayerController controller;
-    Tienda tienda;
+    HudManager tienda;
 
     [Header("Variables Personajes:")]
     public bool arma;
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
     public void ComprarVida()
     {
         controller = GameObject.FindGameObjectWithTag("Personaje").GetComponent<PlayerController>();
-        tienda = GameObject.FindGameObjectWithTag("Tienda").GetComponent<Tienda>();
+        tienda = GameObject.FindGameObjectWithTag("Tienda").GetComponent<HudManager>();
 
         if (controller.salud < 3 && controller.fragmentos >= 150)
         {
@@ -63,14 +63,14 @@ public class GameManager : MonoBehaviour
             controller.fragmentos -= 150;
             controller.VidaActual();
             controller.Puntos();
-            tienda.Reanudar();
+            tienda.ReanudarTienda();
         }
     }
 
     public void ComprarEscudo()
     {
         controller = GameObject.FindGameObjectWithTag("Personaje").GetComponent<PlayerController>();
-        tienda = GameObject.FindGameObjectWithTag("Tienda").GetComponent<Tienda>();
+        tienda = GameObject.FindGameObjectWithTag("Tienda").GetComponent<HudManager>();
 
         if(controller.tieneEscudo == false &&  controller.fragmentos >= 150)
         {
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
             controller.fragmentos -= 150;
             controller.Escudo();
             controller.Puntos();
-            tienda.Reanudar();
+            tienda.ReanudarTienda();
         }
     }
 }
